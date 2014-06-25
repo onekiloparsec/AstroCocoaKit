@@ -8,10 +8,8 @@
 
 #import "KPCAstronomicalCoordinates.h"
 #import "KPCAstronomicalCoordinates+Labels.h"
-
-#import "KPCAstroCocoaKit.h"
-
 #import "KPCTerrestrialCoordinates.h"
+#import "KPCScientificConstants.h"
 
 @interface KPCAstronomicalCoordinates () {
 	KPCAstronomicalCoordinatesSystem _system;

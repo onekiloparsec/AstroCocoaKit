@@ -13,7 +13,7 @@
 		9FD38601195941ED0074D006 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD385EA195941ED0074D006 /* Cocoa.framework */; };
 		9FD38604195941ED0074D006 /* AstroCocoaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD385E7195941ED0074D006 /* AstroCocoaKit.framework */; };
 		9FD3860A195941ED0074D006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD38608195941ED0074D006 /* InfoPlist.strings */; };
-		9FD386381959426F0074D006 /* KPCAstroCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD386151959426F0074D006 /* KPCAstroCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FD386381959426F0074D006 /* AstroCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD386151959426F0074D006 /* AstroCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FD386391959426F0074D006 /* KPCAstronomicalCoordinates.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD386161959426F0074D006 /* KPCAstronomicalCoordinates.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FD3863A1959426F0074D006 /* KPCAstronomicalCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386171959426F0074D006 /* KPCAstronomicalCoordinates.m */; };
 		9FD3863B1959426F0074D006 /* KPCAstronomicalCoordinatesComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD386181959426F0074D006 /* KPCAstronomicalCoordinatesComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -85,7 +85,7 @@
 		9FD385FF195941ED0074D006 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9FD38607195941ED0074D006 /* AstroCocoaKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AstroCocoaKitTests-Info.plist"; sourceTree = "<group>"; };
 		9FD38609195941ED0074D006 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9FD386151959426F0074D006 /* KPCAstroCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstroCocoaKit.h; sourceTree = "<group>"; };
+		9FD386151959426F0074D006 /* AstroCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstroCocoaKit.h; sourceTree = "<group>"; };
 		9FD386161959426F0074D006 /* KPCAstronomicalCoordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalCoordinates.h; sourceTree = "<group>"; };
 		9FD386171959426F0074D006 /* KPCAstronomicalCoordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalCoordinates.m; sourceTree = "<group>"; };
 		9FD386181959426F0074D006 /* KPCAstronomicalCoordinatesComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalCoordinatesComponents.h; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		9FD385F0195941ED0074D006 /* AstroCocoaKit */ = {
 			isa = PBXGroup;
 			children = (
-				9FD386151959426F0074D006 /* KPCAstroCocoaKit.h */,
+				9FD386151959426F0074D006 /* AstroCocoaKit.h */,
 				9FD3865D195942F00074D006 /* KPCScientificConstants.h */,
 				9FD3865E195942F00074D006 /* KPCScientificConstants.m */,
 				9FD386631959430C0074D006 /* Coordinates */,
@@ -317,7 +317,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FD386381959426F0074D006 /* KPCAstroCocoaKit.h in Headers */,
+				9FD386381959426F0074D006 /* AstroCocoaKit.h in Headers */,
 				9FD386491959426F0074D006 /* KPCSphericalCoordinates.h in Headers */,
 				9FD3863F1959426F0074D006 /* KPCEarth.h in Headers */,
 				9FD3865F195942F00074D006 /* KPCAstronomicalCoordinates+Labels.h in Headers */,
