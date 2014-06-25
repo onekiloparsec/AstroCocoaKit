@@ -59,7 +59,6 @@
 		9FD38672195944490074D006 /* KPCMoonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866D195944490074D006 /* KPCMoonTest.m */; };
 		9FD38673195944490074D006 /* KPCSphericalCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */; };
 		9FD38674195944490074D006 /* KPCTerrestrialCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */; };
-		9FD38677195945550074D006 /* KPCAstronomicalCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD38676195945550074D006 /* KPCAstronomicalCoordinatesTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -466,7 +465,6 @@
 			files = (
 				9FD38673195944490074D006 /* KPCSphericalCoordinatesTest.m in Sources */,
 				9FD38674195944490074D006 /* KPCTerrestrialCoordinatesTest.m in Sources */,
-				9FD38677195945550074D006 /* KPCAstronomicalCoordinatesTest.m in Sources */,
 				9FD38671195944490074D006 /* KPCCoordinatesComponentsTest.m in Sources */,
 				9FD38670195944490074D006 /* KPCAstroCoordsComponentsTest.m in Sources */,
 				9FD38672195944490074D006 /* KPCMoonTest.m in Sources */,
@@ -583,6 +581,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AstroCocoaKit/AstroCocoaKit-Prefix.pch";
 				INFOPLIST_FILE = "AstroCocoaKit/AstroCocoaKit-Info.plist";
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -598,6 +597,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AstroCocoaKit/AstroCocoaKit-Prefix.pch";
 				INFOPLIST_FILE = "AstroCocoaKit/AstroCocoaKit-Info.plist";
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};

@@ -7,10 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-
-#import "STLNightConstants.h"
 #import "KPCScientificConstants.h"
-#import "STLAstronomicalCoordinates.h"
+#import "KPCAstronomicalCoordinates.h"
 
 @interface AstronomicalCoordinatesTest : XCTestCase
 @end
@@ -20,7 +18,7 @@
 
 - (void)testCoordinatesUnits
 {
-	STLAstronomicalCoordinates *coords = [[STLAstronomicalCoordinates alloc] init];
+	KPCAstronomicalCoordinates *coords = [[STLAstronomicalCoordinates alloc] init];
 	XCTAssertTrue([coords units] == KPCCoordinatesUnitsHoursAndDegrees, @"Astronomical coordinates units not degrees!");
 	
 	[coords setRightAscension:10.];
@@ -35,7 +33,7 @@
 
 - (void)testCoordinatesEpochPrecession
 {
-	STLAstronomicalCoordinates *coords = [STLAstronomicalCoordinates emptyCoordinatesWithEpoch:2011.2];
+	KPCAstronomicalCoordinates *coords = [KPCAstronomicalCoordinates emptyCoordinatesWithEpoch:2011.2];
 	
 	XCTAssertTrue([coords epoch] == 2011.2, 
 				 @"Storing epoch failed.");
@@ -43,12 +41,12 @@
 	[coords setRightAscension:10.];
 	[coords setDeclination:-30.];
 	
-	STLAstronomicalCoordinates *newCoords = [coords precessedCoordinatesToStandardEpoch];
+	KPCAstronomicalCoordinates *newCoords = [coords precessedCoordinatesToStandardEpoch];
 	
 	XCTAssertTrue([newCoords epoch] == KPCJulianEpochStandard(),
 				 @"Precessing to standard epoch failed to set new epoch as standard one");
 	
-	STLAstronomicalCoordinates *backCoords = [newCoords precessedCoordinatesToEpoch:2011.2];
+	KPCAstronomicalCoordinates *backCoords = [newCoords precessedCoordinatesToEpoch:2011.2];
 		
 	XCTAssertEqualObjects(coords, backCoords,
 						 @"Precession back and forth does not end up with equal coords: %@ != %@.",
@@ -57,7 +55,7 @@
 
 - (void)testCoordinatesFormatting
 {
-	STLAstronomicalCoordinates *coords = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords = [KPCAstronomicalCoordinates emptyCoordinates];
 	
 	[coords setRightAscension:10.52];
 	[coords setDeclination:-31.46];
@@ -71,7 +69,7 @@
 
 - (void)testNegativeDeclination
 {
-	STLAstronomicalCoordinates *coords = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords = [KPCAstronomicalCoordinates emptyCoordinates];
 	[coords setDeclination:-0.2];
 		
 	XCTAssertEqualObjects([coords declinationElementsString], @"-0º 12\' 00.0\"",
@@ -107,7 +105,7 @@
 	NSArray *ra  = [NSArray arrayWithObjects:@"2", @"44", @"11.99", nil];
 	NSArray *dec = [NSArray arrayWithObjects:@"49", @"13", @"42.5", nil];
 	
-	STLAstronomicalCoordinates *coords = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords = [KPCAstronomicalCoordinates emptyCoordinates];
 	[coords setRightAscensionElements:ra];
 	[coords setDeclinationElements:dec];
 	
@@ -138,7 +136,7 @@
 	NSArray *ra  = [NSArray arrayWithObjects:@"16", @"54", @"00.14", nil];
 	NSArray *dec = [NSArray arrayWithObjects:@"-39", @"50", @"44.9", nil];
 	
-	STLAstronomicalCoordinates *coords = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords = [KPCAstronomicalCoordinates emptyCoordinates];
 	[coords setRightAscensionElements:ra];
 	[coords setDeclinationElements:dec];
 	
@@ -169,7 +167,7 @@
 	NSArray *ra1  = [NSArray arrayWithObjects:@"16", @"54", @"00.14", nil];
 	NSArray *dec1 = [NSArray arrayWithObjects:@"-39", @"50", @"44.9", nil];
 	
-	STLAstronomicalCoordinates *coords1 = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords1 = [KPCAstronomicalCoordinates emptyCoordinates];
 	[coords1 setRightAscensionElements:ra1];
 	[coords1 setDeclinationElements:dec1];
 
@@ -185,7 +183,7 @@
 	NSArray *ra2  = [NSArray arrayWithObjects:@"21", @"33", @"27.02", nil];
 	NSArray *dec2 = [NSArray arrayWithObjects:@"-00", @"49", @"23.7", nil];
 	
-	STLAstronomicalCoordinates *coords2 = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords2 = [KPCAstronomicalCoordinates emptyCoordinates];
 	[coords2 setRightAscensionElements:ra2];
 	[coords2 setDeclinationElements:dec2];
 
@@ -204,7 +202,7 @@
 	NSArray *ra1  = [NSArray arrayWithObjects:@"00", @"59", @"26.5687", nil];
 	NSArray *dec1 = [NSArray arrayWithObjects:@"-72", @"09", @"53.911", nil];
 	
-	STLAstronomicalCoordinates *coords1 = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords1 = [KPCAstronomicalCoordinates emptyCoordinates];
 	[coords1 setRightAscensionElements:ra1];
 	[coords1 setDeclinationElements:dec1];
 
@@ -215,7 +213,7 @@
 	NSArray *ra2  = [NSArray arrayWithObjects:@"21", @"33", @"27.02", nil];
 	NSArray *dec2 = [NSArray arrayWithObjects:@"-00", @"49", @"23.7", nil];
 	
-	STLAstronomicalCoordinates *coords2 = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords2 = [KPCAstronomicalCoordinates emptyCoordinates];
 	[coords2 setRightAscensionElements:ra2];
 	[coords2 setDeclinationElements:dec2];
 
@@ -235,7 +233,7 @@
 	NSArray *ra1  = [NSArray arrayWithObjects:@"05", @"20", @"49.0", nil];
 	NSArray *dec1 = [NSArray arrayWithObjects:@"26", @"59", @"26.0", nil];
 
-	STLAstronomicalCoordinates *coords1 = [STLAstronomicalCoordinates emptyCoordinates];
+	KPCAstronomicalCoordinates *coords1 = [KPCAstronomicalCoordinates emptyCoordinates];
 	[coords1 setRightAscensionElements:ra1];
 	[coords1 setDeclinationElements:dec1];
 
