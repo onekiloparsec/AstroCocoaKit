@@ -26,6 +26,7 @@
 #import "KPCTerrestrialCoordinates.h"
 #import "KPCAstronomicalCoordinates.h"
 #import "KPCAstronomicalCoordinates+Labels.h"
+#import "KPCSkyCoordinates.h"
 
 #import "KPCTimes.h"
 #import "KPCSun.h"
