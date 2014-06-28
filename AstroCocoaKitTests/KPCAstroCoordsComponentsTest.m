@@ -55,9 +55,4 @@
 	XCTAssertTrue(c1.system == c2.system, @"When final epoch is unchanged, output must be unchanged.");
 }
 
-- (void)testPrecessionOutputValues
-{
-	
-}
-
 @end

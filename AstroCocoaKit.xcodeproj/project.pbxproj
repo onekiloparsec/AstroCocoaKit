@@ -7,6 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FBF5873195EDEA3002F1C55 /* KPCAstronomicalAge.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5849195EDEA3002F1C55 /* KPCAstronomicalAge.h */; };
+		9FBF5874195EDEA3002F1C55 /* KPCAstronomicalAge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF584A195EDEA3002F1C55 /* KPCAstronomicalAge.m */; };
+		9FBF5875195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF584B195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.h */; };
+		9FBF5876195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF584C195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.m */; };
+		9FBF5877195EDEA3002F1C55 /* KPCAstronomicalColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF584D195EDEA3002F1C55 /* KPCAstronomicalColor.h */; };
+		9FBF5878195EDEA3002F1C55 /* KPCAstronomicalColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF584E195EDEA3002F1C55 /* KPCAstronomicalColor.m */; };
+		9FBF5879195EDEA3002F1C55 /* KPCAstronomicalDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF584F195EDEA3002F1C55 /* KPCAstronomicalDistance.h */; };
+		9FBF587A195EDEA3002F1C55 /* KPCAstronomicalDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5850195EDEA3002F1C55 /* KPCAstronomicalDistance.m */; };
+		9FBF587B195EDEA3002F1C55 /* KPCAstronomicalEccentricity.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5851195EDEA3002F1C55 /* KPCAstronomicalEccentricity.h */; };
+		9FBF587C195EDEA3002F1C55 /* KPCAstronomicalEccentricity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5852195EDEA3002F1C55 /* KPCAstronomicalEccentricity.m */; };
+		9FBF587D195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5853195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.h */; };
+		9FBF587E195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5854195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.m */; };
+		9FBF587F195EDEA3002F1C55 /* KPCAstronomicalFlux.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5855195EDEA3002F1C55 /* KPCAstronomicalFlux.h */; };
+		9FBF5880195EDEA3002F1C55 /* KPCAstronomicalFlux.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5856195EDEA3002F1C55 /* KPCAstronomicalFlux.m */; };
+		9FBF5881195EDEA3002F1C55 /* KPCAstronomicalInclination.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5857195EDEA3002F1C55 /* KPCAstronomicalInclination.h */; };
+		9FBF5882195EDEA3002F1C55 /* KPCAstronomicalInclination.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5858195EDEA3002F1C55 /* KPCAstronomicalInclination.m */; };
+		9FBF5883195EDEA3002F1C55 /* KPCAstronomicalInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5859195EDEA3002F1C55 /* KPCAstronomicalInfo.h */; };
+		9FBF5884195EDEA3002F1C55 /* KPCAstronomicalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF585A195EDEA3002F1C55 /* KPCAstronomicalInfo.m */; };
+		9FBF5885195EDEA3002F1C55 /* KPCAstronomicalInfo+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF585B195EDEA3002F1C55 /* KPCAstronomicalInfo+Private.h */; };
+		9FBF5886195EDEA3002F1C55 /* KPCAstronomicalInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF585C195EDEA3002F1C55 /* KPCAstronomicalInfos.h */; };
+		9FBF5887195EDEA3002F1C55 /* KPCAstronomicalInfoValueDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF585D195EDEA3002F1C55 /* KPCAstronomicalInfoValueDescription.h */; };
+		9FBF5888195EDEA3002F1C55 /* KPCAstronomicalMass.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF585E195EDEA3002F1C55 /* KPCAstronomicalMass.h */; };
+		9FBF5889195EDEA3002F1C55 /* KPCAstronomicalMass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF585F195EDEA3002F1C55 /* KPCAstronomicalMass.m */; };
+		9FBF588A195EDEA3002F1C55 /* KPCAstronomicalMetallicity.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5860195EDEA3002F1C55 /* KPCAstronomicalMetallicity.h */; };
+		9FBF588B195EDEA3002F1C55 /* KPCAstronomicalMetallicity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5861195EDEA3002F1C55 /* KPCAstronomicalMetallicity.m */; };
+		9FBF588C195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5862195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.h */; };
+		9FBF588D195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5863195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.m */; };
+		9FBF588E195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5864195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.h */; };
+		9FBF588F195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5865195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.m */; };
+		9FBF5890195EDEA3002F1C55 /* KPCAstronomicalParallax.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5866195EDEA3002F1C55 /* KPCAstronomicalParallax.h */; };
+		9FBF5891195EDEA3002F1C55 /* KPCAstronomicalParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5867195EDEA3002F1C55 /* KPCAstronomicalParallax.m */; };
+		9FBF5892195EDEA3002F1C55 /* KPCAstronomicalProperMotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5868195EDEA3002F1C55 /* KPCAstronomicalProperMotion.h */; };
+		9FBF5893195EDEA3002F1C55 /* KPCAstronomicalProperMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5869195EDEA3002F1C55 /* KPCAstronomicalProperMotion.m */; };
+		9FBF5894195EDEA3002F1C55 /* KPCAstronomicalRadius.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF586A195EDEA3002F1C55 /* KPCAstronomicalRadius.h */; };
+		9FBF5895195EDEA3002F1C55 /* KPCAstronomicalRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF586B195EDEA3002F1C55 /* KPCAstronomicalRadius.m */; };
+		9FBF5896195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF586C195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.h */; };
+		9FBF5897195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF586D195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.m */; };
+		9FBF5898195EDEA3002F1C55 /* KPCAstronomicalSpectralType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF586E195EDEA3002F1C55 /* KPCAstronomicalSpectralType.h */; };
+		9FBF5899195EDEA3002F1C55 /* KPCAstronomicalSpectralType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF586F195EDEA3002F1C55 /* KPCAstronomicalSpectralType.m */; };
+		9FBF589A195EDEA3002F1C55 /* KPCAstronomicalVelocity.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5870195EDEA3002F1C55 /* KPCAstronomicalVelocity.h */; };
+		9FBF589B195EDEA3002F1C55 /* KPCAstronomicalVelocity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5871195EDEA3002F1C55 /* KPCAstronomicalVelocity.m */; };
+		9FBF589C195EDEA3002F1C55 /* KPCSIMBADVOTableValueSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5872195EDEA3002F1C55 /* KPCSIMBADVOTableValueSetting.h */; };
+		9FBF589E195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */; };
 		9FD385EB195941ED0074D006 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD385EA195941ED0074D006 /* Cocoa.framework */; };
 		9FD385F5195941ED0074D006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD385F3195941ED0074D006 /* InfoPlist.strings */; };
 		9FD38600195941ED0074D006 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD385FF195941ED0074D006 /* XCTest.framework */; };
@@ -72,6 +115,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9FBF5849195EDEA3002F1C55 /* KPCAstronomicalAge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalAge.h; sourceTree = "<group>"; };
+		9FBF584A195EDEA3002F1C55 /* KPCAstronomicalAge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalAge.m; sourceTree = "<group>"; };
+		9FBF584B195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalAngularDistance.h; sourceTree = "<group>"; };
+		9FBF584C195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalAngularDistance.m; sourceTree = "<group>"; };
+		9FBF584D195EDEA3002F1C55 /* KPCAstronomicalColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalColor.h; sourceTree = "<group>"; };
+		9FBF584E195EDEA3002F1C55 /* KPCAstronomicalColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalColor.m; sourceTree = "<group>"; };
+		9FBF584F195EDEA3002F1C55 /* KPCAstronomicalDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalDistance.h; sourceTree = "<group>"; };
+		9FBF5850195EDEA3002F1C55 /* KPCAstronomicalDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalDistance.m; sourceTree = "<group>"; };
+		9FBF5851195EDEA3002F1C55 /* KPCAstronomicalEccentricity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalEccentricity.h; sourceTree = "<group>"; };
+		9FBF5852195EDEA3002F1C55 /* KPCAstronomicalEccentricity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalEccentricity.m; sourceTree = "<group>"; };
+		9FBF5853195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalEffectiveTemperature.h; sourceTree = "<group>"; };
+		9FBF5854195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalEffectiveTemperature.m; sourceTree = "<group>"; };
+		9FBF5855195EDEA3002F1C55 /* KPCAstronomicalFlux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalFlux.h; sourceTree = "<group>"; };
+		9FBF5856195EDEA3002F1C55 /* KPCAstronomicalFlux.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalFlux.m; sourceTree = "<group>"; };
+		9FBF5857195EDEA3002F1C55 /* KPCAstronomicalInclination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalInclination.h; sourceTree = "<group>"; };
+		9FBF5858195EDEA3002F1C55 /* KPCAstronomicalInclination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalInclination.m; sourceTree = "<group>"; };
+		9FBF5859195EDEA3002F1C55 /* KPCAstronomicalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalInfo.h; sourceTree = "<group>"; };
+		9FBF585A195EDEA3002F1C55 /* KPCAstronomicalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalInfo.m; sourceTree = "<group>"; };
+		9FBF585B195EDEA3002F1C55 /* KPCAstronomicalInfo+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KPCAstronomicalInfo+Private.h"; sourceTree = "<group>"; };
+		9FBF585C195EDEA3002F1C55 /* KPCAstronomicalInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalInfos.h; sourceTree = "<group>"; };
+		9FBF585D195EDEA3002F1C55 /* KPCAstronomicalInfoValueDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalInfoValueDescription.h; sourceTree = "<group>"; };
+		9FBF585E195EDEA3002F1C55 /* KPCAstronomicalMass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalMass.h; sourceTree = "<group>"; };
+		9FBF585F195EDEA3002F1C55 /* KPCAstronomicalMass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalMass.m; sourceTree = "<group>"; };
+		9FBF5860195EDEA3002F1C55 /* KPCAstronomicalMetallicity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalMetallicity.h; sourceTree = "<group>"; };
+		9FBF5861195EDEA3002F1C55 /* KPCAstronomicalMetallicity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalMetallicity.m; sourceTree = "<group>"; };
+		9FBF5862195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalMorphologicalType.h; sourceTree = "<group>"; };
+		9FBF5863195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalMorphologicalType.m; sourceTree = "<group>"; };
+		9FBF5864195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalOrbitalPeriod.h; sourceTree = "<group>"; };
+		9FBF5865195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalOrbitalPeriod.m; sourceTree = "<group>"; };
+		9FBF5866195EDEA3002F1C55 /* KPCAstronomicalParallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalParallax.h; sourceTree = "<group>"; };
+		9FBF5867195EDEA3002F1C55 /* KPCAstronomicalParallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalParallax.m; sourceTree = "<group>"; };
+		9FBF5868195EDEA3002F1C55 /* KPCAstronomicalProperMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalProperMotion.h; sourceTree = "<group>"; };
+		9FBF5869195EDEA3002F1C55 /* KPCAstronomicalProperMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalProperMotion.m; sourceTree = "<group>"; };
+		9FBF586A195EDEA3002F1C55 /* KPCAstronomicalRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalRadius.h; sourceTree = "<group>"; };
+		9FBF586B195EDEA3002F1C55 /* KPCAstronomicalRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalRadius.m; sourceTree = "<group>"; };
+		9FBF586C195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalSemiMajorAxis.h; sourceTree = "<group>"; };
+		9FBF586D195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalSemiMajorAxis.m; sourceTree = "<group>"; };
+		9FBF586E195EDEA3002F1C55 /* KPCAstronomicalSpectralType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalSpectralType.h; sourceTree = "<group>"; };
+		9FBF586F195EDEA3002F1C55 /* KPCAstronomicalSpectralType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalSpectralType.m; sourceTree = "<group>"; };
+		9FBF5870195EDEA3002F1C55 /* KPCAstronomicalVelocity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalVelocity.h; sourceTree = "<group>"; };
+		9FBF5871195EDEA3002F1C55 /* KPCAstronomicalVelocity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalVelocity.m; sourceTree = "<group>"; };
+		9FBF5872195EDEA3002F1C55 /* KPCSIMBADVOTableValueSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCSIMBADVOTableValueSetting.h; sourceTree = "<group>"; };
+		9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalInfoTest.m; sourceTree = "<group>"; };
 		9FD385E7195941ED0074D006 /* AstroCocoaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AstroCocoaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD385EA195941ED0074D006 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9FD385ED195941ED0074D006 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -155,6 +241,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FBF5848195EDE8C002F1C55 /* Infos */ = {
+			isa = PBXGroup;
+			children = (
+				9FBF585D195EDEA3002F1C55 /* KPCAstronomicalInfoValueDescription.h */,
+				9FBF5872195EDEA3002F1C55 /* KPCSIMBADVOTableValueSetting.h */,
+				9FBF5849195EDEA3002F1C55 /* KPCAstronomicalAge.h */,
+				9FBF584A195EDEA3002F1C55 /* KPCAstronomicalAge.m */,
+				9FBF584B195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.h */,
+				9FBF584C195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.m */,
+				9FBF584D195EDEA3002F1C55 /* KPCAstronomicalColor.h */,
+				9FBF584E195EDEA3002F1C55 /* KPCAstronomicalColor.m */,
+				9FBF584F195EDEA3002F1C55 /* KPCAstronomicalDistance.h */,
+				9FBF5850195EDEA3002F1C55 /* KPCAstronomicalDistance.m */,
+				9FBF5851195EDEA3002F1C55 /* KPCAstronomicalEccentricity.h */,
+				9FBF5852195EDEA3002F1C55 /* KPCAstronomicalEccentricity.m */,
+				9FBF5853195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.h */,
+				9FBF5854195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.m */,
+				9FBF5855195EDEA3002F1C55 /* KPCAstronomicalFlux.h */,
+				9FBF5856195EDEA3002F1C55 /* KPCAstronomicalFlux.m */,
+				9FBF5857195EDEA3002F1C55 /* KPCAstronomicalInclination.h */,
+				9FBF5858195EDEA3002F1C55 /* KPCAstronomicalInclination.m */,
+				9FBF5859195EDEA3002F1C55 /* KPCAstronomicalInfo.h */,
+				9FBF585A195EDEA3002F1C55 /* KPCAstronomicalInfo.m */,
+				9FBF585B195EDEA3002F1C55 /* KPCAstronomicalInfo+Private.h */,
+				9FBF585C195EDEA3002F1C55 /* KPCAstronomicalInfos.h */,
+				9FBF585E195EDEA3002F1C55 /* KPCAstronomicalMass.h */,
+				9FBF585F195EDEA3002F1C55 /* KPCAstronomicalMass.m */,
+				9FBF5860195EDEA3002F1C55 /* KPCAstronomicalMetallicity.h */,
+				9FBF5861195EDEA3002F1C55 /* KPCAstronomicalMetallicity.m */,
+				9FBF5862195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.h */,
+				9FBF5863195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.m */,
+				9FBF5864195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.h */,
+				9FBF5865195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.m */,
+				9FBF5866195EDEA3002F1C55 /* KPCAstronomicalParallax.h */,
+				9FBF5867195EDEA3002F1C55 /* KPCAstronomicalParallax.m */,
+				9FBF5868195EDEA3002F1C55 /* KPCAstronomicalProperMotion.h */,
+				9FBF5869195EDEA3002F1C55 /* KPCAstronomicalProperMotion.m */,
+				9FBF586A195EDEA3002F1C55 /* KPCAstronomicalRadius.h */,
+				9FBF586B195EDEA3002F1C55 /* KPCAstronomicalRadius.m */,
+				9FBF586C195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.h */,
+				9FBF586D195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.m */,
+				9FBF586E195EDEA3002F1C55 /* KPCAstronomicalSpectralType.h */,
+				9FBF586F195EDEA3002F1C55 /* KPCAstronomicalSpectralType.m */,
+				9FBF5870195EDEA3002F1C55 /* KPCAstronomicalVelocity.h */,
+				9FBF5871195EDEA3002F1C55 /* KPCAstronomicalVelocity.m */,
+			);
+			name = Infos;
+			sourceTree = "<group>";
+		};
 		9FD385DD195941ED0074D006 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +339,7 @@
 				9FD386631959430C0074D006 /* Coordinates */,
 				9FD38664195943340074D006 /* Functions */,
 				9FD38665195943400074D006 /* Twilights */,
+				9FBF5848195EDE8C002F1C55 /* Infos */,
 				9FD38666195943480074D006 /* Categories */,
 			);
 			path = AstroCocoaKit;
@@ -229,6 +365,7 @@
 				9FD3866D195944490074D006 /* KPCMoonTest.m */,
 				9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */,
 				9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */,
+				9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */,
 				9FD38606195941ED0074D006 /* Supporting Files */,
 			);
 			path = AstroCocoaKitTests;
@@ -316,27 +453,50 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBF5890195EDEA3002F1C55 /* KPCAstronomicalParallax.h in Headers */,
 				9FD386381959426F0074D006 /* AstroCocoaKit.h in Headers */,
 				9FD386491959426F0074D006 /* KPCSphericalCoordinates.h in Headers */,
+				9FBF5875195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.h in Headers */,
 				9FD3863F1959426F0074D006 /* KPCEarth.h in Headers */,
 				9FD3865F195942F00074D006 /* KPCAstronomicalCoordinates+Labels.h in Headers */,
+				9FBF589C195EDEA3002F1C55 /* KPCSIMBADVOTableValueSetting.h in Headers */,
+				9FBF5877195EDEA3002F1C55 /* KPCAstronomicalColor.h in Headers */,
+				9FBF5887195EDEA3002F1C55 /* KPCAstronomicalInfoValueDescription.h in Headers */,
+				9FBF5879195EDEA3002F1C55 /* KPCAstronomicalDistance.h in Headers */,
+				9FBF5892195EDEA3002F1C55 /* KPCAstronomicalProperMotion.h in Headers */,
 				9FD3863B1959426F0074D006 /* KPCAstronomicalCoordinatesComponents.h in Headers */,
+				9FBF588A195EDEA3002F1C55 /* KPCAstronomicalMetallicity.h in Headers */,
+				9FBF5881195EDEA3002F1C55 /* KPCAstronomicalInclination.h in Headers */,
+				9FBF587F195EDEA3002F1C55 /* KPCAstronomicalFlux.h in Headers */,
 				9FD38669195943900074D006 /* NSDate+KPCTimes.h in Headers */,
 				9FD386531959426F0074D006 /* KPCTwilights.h in Headers */,
+				9FBF589A195EDEA3002F1C55 /* KPCAstronomicalVelocity.h in Headers */,
+				9FBF588E195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.h in Headers */,
 				9FD38661195942F00074D006 /* KPCScientificConstants.h in Headers */,
 				9FD386451959426F0074D006 /* KPCSky.h in Headers */,
 				9FD386511959426F0074D006 /* KPCTwilightConstants.h in Headers */,
+				9FBF5883195EDEA3002F1C55 /* KPCAstronomicalInfo.h in Headers */,
 				9FD3865A1959426F0074D006 /* sunriset.h in Headers */,
+				9FBF587D195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.h in Headers */,
+				9FBF5894195EDEA3002F1C55 /* KPCAstronomicalRadius.h in Headers */,
+				9FBF5885195EDEA3002F1C55 /* KPCAstronomicalInfo+Private.h in Headers */,
+				9FBF5898195EDEA3002F1C55 /* KPCAstronomicalSpectralType.h in Headers */,
 				9FD386571959426F0074D006 /* NSNumber+KPCValueStrings.h in Headers */,
 				9FD3864F1959426F0074D006 /* KPCTimes.h in Headers */,
+				9FBF5886195EDEA3002F1C55 /* KPCAstronomicalInfos.h in Headers */,
 				9FD386471959426F0074D006 /* KPCSkyCoordinates.h in Headers */,
 				9FD3864B1959426F0074D006 /* KPCSun.h in Headers */,
 				9FD386431959426F0074D006 /* KPCMoon.h in Headers */,
 				9FD386391959426F0074D006 /* KPCAstronomicalCoordinates.h in Headers */,
+				9FBF588C195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.h in Headers */,
 				9FD386551959426F0074D006 /* KPCTwilightSet.h in Headers */,
 				9FD386411959426F0074D006 /* KPCLight.h in Headers */,
+				9FBF5896195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.h in Headers */,
+				9FBF5888195EDEA3002F1C55 /* KPCAstronomicalMass.h in Headers */,
 				9FD3863D1959426F0074D006 /* KPCCoordinatesComponents.h in Headers */,
+				9FBF587B195EDEA3002F1C55 /* KPCAstronomicalEccentricity.h in Headers */,
 				9FD3864D1959426F0074D006 /* KPCTerrestrialCoordinates.h in Headers */,
+				9FBF5873195EDEA3002F1C55 /* KPCAstronomicalAge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,25 +597,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD3863C1959426F0074D006 /* KPCAstronomicalCoordinatesComponents.m in Sources */,
+				9FBF5878195EDEA3002F1C55 /* KPCAstronomicalColor.m in Sources */,
+				9FBF5884195EDEA3002F1C55 /* KPCAstronomicalInfo.m in Sources */,
 				9FD386421959426F0074D006 /* KPCLight.m in Sources */,
+				9FBF5876195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.m in Sources */,
+				9FBF5893195EDEA3002F1C55 /* KPCAstronomicalProperMotion.m in Sources */,
 				9FD3863A1959426F0074D006 /* KPCAstronomicalCoordinates.m in Sources */,
+				9FBF5889195EDEA3002F1C55 /* KPCAstronomicalMass.m in Sources */,
 				9FD3864C1959426F0074D006 /* KPCSun.m in Sources */,
 				9FD386561959426F0074D006 /* KPCTwilightSet.m in Sources */,
 				9FD38662195942F00074D006 /* KPCScientificConstants.m in Sources */,
 				9FD3864E1959426F0074D006 /* KPCTerrestrialCoordinates.m in Sources */,
+				9FBF5891195EDEA3002F1C55 /* KPCAstronomicalParallax.m in Sources */,
 				9FD386521959426F0074D006 /* KPCTwilightConstants.m in Sources */,
 				9FD38660195942F00074D006 /* KPCAstronomicalCoordinates+Labels.m in Sources */,
 				9FD386541959426F0074D006 /* KPCTwilights.m in Sources */,
 				9FD3866A195943900074D006 /* NSDate+KPCTimes.m in Sources */,
+				9FBF5874195EDEA3002F1C55 /* KPCAstronomicalAge.m in Sources */,
+				9FBF588B195EDEA3002F1C55 /* KPCAstronomicalMetallicity.m in Sources */,
 				9FD386591959426F0074D006 /* sunriset.c in Sources */,
+				9FBF5895195EDEA3002F1C55 /* KPCAstronomicalRadius.m in Sources */,
+				9FBF587C195EDEA3002F1C55 /* KPCAstronomicalEccentricity.m in Sources */,
 				9FD386441959426F0074D006 /* KPCMoon.m in Sources */,
 				9FD3863E1959426F0074D006 /* KPCCoordinatesComponents.m in Sources */,
+				9FBF587A195EDEA3002F1C55 /* KPCAstronomicalDistance.m in Sources */,
+				9FBF587E195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.m in Sources */,
 				9FD386401959426F0074D006 /* KPCEarth.m in Sources */,
+				9FBF589B195EDEA3002F1C55 /* KPCAstronomicalVelocity.m in Sources */,
 				9FD386481959426F0074D006 /* KPCSkyCoordinates.m in Sources */,
 				9FD386501959426F0074D006 /* KPCTimes.m in Sources */,
 				9FD386461959426F0074D006 /* KPCSky.m in Sources */,
+				9FBF5880195EDEA3002F1C55 /* KPCAstronomicalFlux.m in Sources */,
+				9FBF5882195EDEA3002F1C55 /* KPCAstronomicalInclination.m in Sources */,
+				9FBF5899195EDEA3002F1C55 /* KPCAstronomicalSpectralType.m in Sources */,
+				9FBF5897195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.m in Sources */,
+				9FBF588D195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.m in Sources */,
 				9FD3864A1959426F0074D006 /* KPCSphericalCoordinates.m in Sources */,
 				9FD386581959426F0074D006 /* NSNumber+KPCValueStrings.m in Sources */,
+				9FBF588F195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +642,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBF589E195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m in Sources */,
 				9FD38673195944490074D006 /* KPCSphericalCoordinatesTest.m in Sources */,
 				9FD38674195944490074D006 /* KPCTerrestrialCoordinatesTest.m in Sources */,
 				9FD38671195944490074D006 /* KPCCoordinatesComponentsTest.m in Sources */,

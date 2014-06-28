@@ -33,8 +33,6 @@ const double GREENWICH_LONGITUDE = 0.0;
 const double GREENWICH_LATITUDE  = 51.4788;
 const double GREENWICH_ALTITUDE  = 0.0;
 
-const double NOT_A_SCIENTIFIC_NUMBER	= -999999999999999.0; // A double NaN that is not NaN for scientific computations.
-
 const double STANDARD_JULIAN_EPOCH		= 2000.0;
 const double J2000						= 2451545.0;
 const double MODIFIED_JULIAN_DAY_ZERO   = 2400000.5;
@@ -97,3 +95,7 @@ const double EARTH_RADIUS_KM	= 6378.137;
 const double EARTH_RADIUS_FLATTENING_FACTOR	= 1./298.257;	// See p82 of AA.
 
 const double ABSOLUTE_ZERO_TEMPERATURE_CELSIUS = -273.15;
+
+
+const double NOT_A_SCIENTIFIC_NUMBER		= -999999999999999.0; // A double NaN that is not NaN for scientific computations.
+NSString *const UNDEFINED_STRING_PROPERTY	= @"UNDEFINED_STRING_PROPERTY";

@@ -25,9 +25,6 @@ extern const double HOUR2MIN;
 extern const double MIN2SEC;
 extern const double HALFDAY2HOUR;
 
-/// A NaN number that is a double and not NaN itself.
-extern const double NOT_A_SCIENTIFIC_NUMBER;
-
 /// Greenwich
 extern const double GREENWICH_LONGITUDE;
 extern const double GREENWICH_LATITUDE;
@@ -87,3 +84,9 @@ extern const double EARTH_RADIUS_KM;
 extern const double EARTH_RADIUS_FLATTENING_FACTOR;
 
 extern const double ABSOLUTE_ZERO_TEMPERATURE_CELSIUS;
+
+
+// Utils
+/// A NaN number that is a double and not NaN itself.
+extern const double NOT_A_SCIENTIFIC_NUMBER;
+extern NSString *const UNDEFINED_STRING_PROPERTY;
