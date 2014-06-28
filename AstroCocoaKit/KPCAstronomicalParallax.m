@@ -11,6 +11,14 @@
 
 @implementation KPCAstronomicalParallax
 
++ (KPCAstronomicalParallax *)parallaxWithValue:(double)v bibcode:(NSString *)b
+{
+	KPCAstronomicalParallax *p = [[KPCAstronomicalParallax alloc] init];
+	p.value = v;
+	p.bibcode = b;
+	return p;
+}
+
 - (void)setSIMBADVOTableValue:(NSString *)v forKey:(NSString *)k
 {
 	if ([v length] == 0) {

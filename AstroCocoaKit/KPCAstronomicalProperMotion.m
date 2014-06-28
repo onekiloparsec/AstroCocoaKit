@@ -9,7 +9,31 @@
 #import "KPCAstronomicalProperMotion.h"
 #import "KPCAstronomicalInfo+Private.h"
 
+@interface KPCAstronomicalProperMotion ()
+
+@property(nonatomic, assign) double rightAscensionValue;
+@property(nonatomic, assign) double declinationValue;
+@property(nonatomic, assign) double rightAscensionErrorValue;
+@property(nonatomic, assign) double declinationErrorValue;
+
+@end
+
 @implementation KPCAstronomicalProperMotion
+
++ (KPCAstronomicalProperMotion *)properMotionWithRA:(double)ra
+											RAError:(double)rae
+												dec:(double)dec
+										   decError:(double)dece
+											bibcode:(NSString *)b
+{
+	KPCAstronomicalProperMotion *pm = [[KPCAstronomicalProperMotion alloc] init];
+	pm.rightAscensionValue = ra;
+	pm.rightAscensionErrorValue = rae;
+	pm.declinationValue = dec;
+	pm.declinationErrorValue = dece;
+	pm.bibcode = b;
+	return pm;
+}
 
 - (void)setup
 {

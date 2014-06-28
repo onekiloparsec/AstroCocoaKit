@@ -19,5 +19,6 @@ typedef NS_ENUM(NSUInteger, KPCAstronomicalSpectralTypeNature) {
 @interface KPCAstronomicalSpectralType : KPCAstronomicalInfo <KPCSIMBADVOTableValueSetting>
 
 + (KPCAstronomicalSpectralType *)spectralType:(NSString *)st;
++ (KPCAstronomicalSpectralType *)spectralType:(NSString *)st bibcode:(NSString *)b;
 
 @end

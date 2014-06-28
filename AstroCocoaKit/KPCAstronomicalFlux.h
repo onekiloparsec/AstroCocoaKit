@@ -11,6 +11,9 @@
 
 @interface KPCAstronomicalFlux : KPCAstronomicalInfo <KPCSIMBADVOTableValueSetting>
 
-@property(nonatomic, copy) NSString *name;
+@property(nonatomic, copy, readonly) NSString *name;
+
++ (KPCAstronomicalFlux *)fluxWithValue:(double)v name:(NSString *)n bibcode:(NSString *)bibcode;
++ (KPCAstronomicalFlux *)fluxWithValue:(double)v error:(double)e name:(NSString *)n;
 
 @end

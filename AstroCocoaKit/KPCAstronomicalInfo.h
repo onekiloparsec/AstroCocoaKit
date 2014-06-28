@@ -24,6 +24,7 @@
 + (instancetype)infoWithValue:(double)v error:(double)e;
 + (instancetype)infoWithValue:(double)v units:(NSUInteger)u;
 + (instancetype)infoWithValue:(double)v error:(double)e units:(NSUInteger)u;
+
 + (instancetype)infoWithStringValue:(NSString *)v stringUnit:(NSString *)u;
 + (instancetype)infoWithBibcode:(NSString *)b wavelength:(NSString *)w type:(NSUInteger)t;
 

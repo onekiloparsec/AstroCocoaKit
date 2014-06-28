@@ -9,7 +9,29 @@
 #import "KPCAstronomicalFlux.h"
 #import "KPCAstronomicalInfo+Private.h"
 
+@interface KPCAstronomicalFlux ()
+@property(nonatomic, copy) NSString *name;
+@end
+
 @implementation KPCAstronomicalFlux
+
++ (KPCAstronomicalFlux *)fluxWithValue:(double)v name:(NSString *)n bibcode:(NSString *)bibcode
+{
+	KPCAstronomicalFlux *f = [KPCAstronomicalFlux emptyInfo];
+	f.value = v;
+	f.name = n;
+	f.bibcode = bibcode;
+	return f;
+}
+
++ (KPCAstronomicalFlux *)fluxWithValue:(double)v error:(double)e name:(NSString *)n
+{
+	KPCAstronomicalFlux *f = [KPCAstronomicalFlux emptyInfo];
+	f.value = v;
+	f.errorValue = e;
+	f.name = n;
+	return f;
+}
 
 - (void)setup
 {

@@ -13,7 +13,14 @@
 
 + (KPCAstronomicalSpectralType *)spectralType:(NSString *)st
 {
-	return [KPCAstronomicalSpectralType infoWithStringValue:st stringUnit:nil];
+	return [KPCAstronomicalSpectralType infoWithStringValue:st stringUnit:UNDEFINED_STRING_PROPERTY];
+}
+
++ (KPCAstronomicalSpectralType *)spectralType:(NSString *)st bibcode:(NSString *)b
+{
+	KPCAstronomicalSpectralType *spectype = [KPCAstronomicalSpectralType infoWithStringValue:st stringUnit:UNDEFINED_STRING_PROPERTY];
+	spectype.bibcode = b;
+	return spectype;
 }
 
 - (void)setSIMBADVOTableValue:(NSString *)v forKey:(NSString *)k

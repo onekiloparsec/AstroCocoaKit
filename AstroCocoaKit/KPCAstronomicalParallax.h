@@ -12,6 +12,8 @@
 
 @interface KPCAstronomicalParallax : KPCAstronomicalInfo <KPCSIMBADVOTableValueSetting>
 
++ (KPCAstronomicalParallax *)parallaxWithValue:(double)v bibcode:(NSString *)b;
+
 - (KPCAstronomicalDistance *)distance;
 
 @end

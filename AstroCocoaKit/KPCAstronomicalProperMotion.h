@@ -11,10 +11,16 @@
 
 @interface KPCAstronomicalProperMotion : KPCAstronomicalInfo <KPCSIMBADVOTableValueSetting>
 
-@property(nonatomic, assign) double rightAscensionValue;
-@property(nonatomic, assign) double declinationValue;
-@property(nonatomic, assign) double rightAscensionErrorValue;
-@property(nonatomic, assign) double declinationErrorValue;
+@property(nonatomic, assign, readonly) double rightAscensionValue;
+@property(nonatomic, assign, readonly) double declinationValue;
+@property(nonatomic, assign, readonly) double rightAscensionErrorValue;
+@property(nonatomic, assign, readonly) double declinationErrorValue;
+
++ (KPCAstronomicalProperMotion *)properMotionWithRA:(double)ra
+											RAError:(double)rae
+												dec:(double)dec
+										   decError:(double)dece
+											bibcode:(NSString *)b;
 
 - (NSString *)rightAscensionValueString;
 - (NSString *)declinationValueString;
