@@ -89,4 +89,4 @@ extern const double ABSOLUTE_ZERO_TEMPERATURE_CELSIUS;
 // Utils
 /// A NaN number that is a double and not NaN itself.
 extern const double NOT_A_SCIENTIFIC_NUMBER;
-extern NSString *const UNDEFINED_STRING_PROPERTY;
+extern NSString *const UNDEFINED_STRING_VALUE;

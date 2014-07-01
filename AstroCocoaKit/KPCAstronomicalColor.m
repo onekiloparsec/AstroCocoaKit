@@ -14,8 +14,8 @@
 - (void)setup
 {
 	[super setup];
-	_firstMagnitudeName = UNDEFINED_STRING_PROPERTY;
-	_secondMagnitudeName = UNDEFINED_STRING_PROPERTY;
+	_firstMagnitudeName = UNDEFINED_STRING_VALUE;
+	_secondMagnitudeName = UNDEFINED_STRING_VALUE;
 }
 
 - (NSMutableArray *)mutableKeys

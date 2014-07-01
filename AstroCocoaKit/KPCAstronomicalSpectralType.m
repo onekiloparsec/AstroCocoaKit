@@ -13,12 +13,12 @@
 
 + (KPCAstronomicalSpectralType *)spectralType:(NSString *)st
 {
-	return [KPCAstronomicalSpectralType infoWithStringValue:st stringUnit:UNDEFINED_STRING_PROPERTY];
+	return [KPCAstronomicalSpectralType infoWithStringValue:st stringUnit:UNDEFINED_STRING_VALUE];
 }
 
 + (KPCAstronomicalSpectralType *)spectralType:(NSString *)st bibcode:(NSString *)b
 {
-	KPCAstronomicalSpectralType *spectype = [KPCAstronomicalSpectralType infoWithStringValue:st stringUnit:UNDEFINED_STRING_PROPERTY];
+	KPCAstronomicalSpectralType *spectype = [KPCAstronomicalSpectralType infoWithStringValue:st stringUnit:UNDEFINED_STRING_VALUE];
 	spectype.bibcode = b;
 	return spectype;
 }

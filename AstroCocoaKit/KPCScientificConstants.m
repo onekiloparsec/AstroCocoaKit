@@ -97,5 +97,5 @@ const double EARTH_RADIUS_FLATTENING_FACTOR	= 1./298.257;	// See p82 of AA.
 const double ABSOLUTE_ZERO_TEMPERATURE_CELSIUS = -273.15;
 
 
-const double NOT_A_SCIENTIFIC_NUMBER		= -999999999999999.0; // A double NaN that is not NaN for scientific computations.
-NSString *const UNDEFINED_STRING_PROPERTY	= @"UNDEFINED_STRING_PROPERTY";
+const double NOT_A_SCIENTIFIC_NUMBER	= -999999999999999.0; // A double NaN that is not NaN for scientific computations.
+NSString *const UNDEFINED_STRING_VALUE	= @"UNDEFINED_STRING_VALUE";

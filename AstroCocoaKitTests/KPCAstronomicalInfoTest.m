@@ -227,14 +227,14 @@
 {
     KPCAstronomicalFlux *m1 = [KPCAstronomicalFlux infoWithValue:NOT_A_SCIENTIFIC_NUMBER units:NOT_A_SCIENTIFIC_NUMBER];
 	XCTAssertTrue([m1 conformsToProtocol:@protocol(KPCSIMBADVOTableValueSetting)], @"Info must conform to KPCSIMBADVOTableValueSetting protocol");
-	XCTAssertTrue(m1.name == UNDEFINED_STRING_PROPERTY, @"Info must have an undefined string name on init");
+	XCTAssertTrue(m1.name == UNDEFINED_STRING_VALUE, @"Info must have an undefined string name on init");
 }
 
 - (void)testColorInfoClass
 {
     KPCAstronomicalColor *m1 = [KPCAstronomicalColor infoWithValue:NOT_A_SCIENTIFIC_NUMBER units:NOT_A_SCIENTIFIC_NUMBER];
-	XCTAssertTrue(m1.firstMagnitudeName == UNDEFINED_STRING_PROPERTY, @"Info must have an undefined string name on init");
-	XCTAssertTrue(m1.secondMagnitudeName == UNDEFINED_STRING_PROPERTY, @"Info must have an undefined string name on init");
+	XCTAssertTrue(m1.firstMagnitudeName == UNDEFINED_STRING_VALUE, @"Info must have an undefined string name on init");
+	XCTAssertTrue(m1.secondMagnitudeName == UNDEFINED_STRING_VALUE, @"Info must have an undefined string name on init");
 }
 
 - (void)testOrbitalPeriodInfoClass

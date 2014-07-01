@@ -36,7 +36,7 @@
 - (void)setup
 {
 	[super setup];
-	_name = UNDEFINED_STRING_PROPERTY;
+	_name = UNDEFINED_STRING_VALUE;
 }
 
 - (NSMutableArray *)mutableKeys

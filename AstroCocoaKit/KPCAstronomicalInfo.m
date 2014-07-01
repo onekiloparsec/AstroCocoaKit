@@ -225,13 +225,13 @@
 
 - (NSString *)description
 {
-	if ((self.stringValue == nil || [self.stringValue isEqualToString:UNDEFINED_STRING_PROPERTY]) && (self.value == NOT_A_SCIENTIFIC_NUMBER || self.value == 0.0)) {
+	if ((self.stringValue == nil || [self.stringValue isEqualToString:UNDEFINED_STRING_VALUE]) && (self.value == NOT_A_SCIENTIFIC_NUMBER || self.value == 0.0)) {
 		return nil;
 	}
 	NSMutableString *s = [NSMutableString stringWithString:[self valueDescriptionPrefix]];
 	[s appendString:@" = "];
 	[s appendString:[self valueDescription]];
-	if (self.stringValue && [self.stringValue isEqualToString:UNDEFINED_STRING_PROPERTY] == NO) {
+	if (self.stringValue && [self.stringValue isEqualToString:UNDEFINED_STRING_VALUE] == NO) {
 		[s appendString:self.stringValue];
 	}
 	else {
