@@ -26,7 +26,7 @@
 - (void)testMakeWithWrongDataInput
 {
 	NSData *data = [@"toto" dataUsingEncoding:NSASCIIStringEncoding];
-	c = KPCMakeCoordinatesComponents(data);
+	KPCCoordinatesComponents c = KPCMakeCoordinatesComponents(data);
 	XCTAssertTrue(c.theta == NOT_A_SCIENTIFIC_NUMBER, @"Wrong component.");
 	XCTAssertTrue(c.phi == NOT_A_SCIENTIFIC_NUMBER, @"Wrong component.");
 	XCTAssertTrue(c.units == KPCCoordinatesUnitsUndefined, @"Wrong component.");
@@ -54,7 +54,7 @@
 - (void)testMakeWithPartiallyCorrectPositiveStringInput
 {
 	// 400 must fall back to default
-	c = KPCMakeCoordinatesComponents(@"3.3 4.4 400");
+	KPCCoordinatesComponents c = KPCMakeCoordinatesComponents(@"3.3 4.4 400");
 	XCTAssertTrue(c.theta == 3.3, @"Wrong component.");
 	XCTAssertTrue(c.phi == 4.4, @"Wrong component.");
 	XCTAssertTrue(c.units == KPCCoordinatesUnitsDefault, @"Wrong component.");
@@ -63,7 +63,7 @@
 - (void)testMakeWithCorrectPositiveNumberInput
 {
 	// 4 must produce KPCCoordinatesUnitsHours
-	c = KPCMakeCoordinatesComponents(@[@(1.1), @(2.2), @(4)]);
+	KPCCoordinatesComponents c = KPCMakeCoordinatesComponents(@[@(1.1), @(2.2), @(4)]);
 	XCTAssertTrue(c.theta == 1.1, @"Wrong component.");
 	XCTAssertTrue(c.phi == 2.2, @"Wrong component.");
 	XCTAssertTrue(c.units == KPCCoordinatesUnitsHours, @"Wrong component, units is %lu.", c.units);
@@ -72,7 +72,7 @@
 - (void)testMakeWithPartiallyCorrectPositiveNumberInput
 {
 	// 400 must fall back to default
-	c = KPCMakeCoordinatesComponents(@[@(3.3), @(4.4), @(400)]);
+	KPCCoordinatesComponents c = KPCMakeCoordinatesComponents(@[@(3.3), @(4.4), @(400)]);
 	XCTAssertTrue(c.theta == 3.3, @"Wrong component.");
 	XCTAssertTrue(c.phi == 4.4, @"Wrong component.");
 	XCTAssertTrue(c.units == KPCCoordinatesUnitsDefault, @"Wrong component.");
@@ -89,7 +89,7 @@
 
 - (void)testMakeWithCorrectMultipleNegativeZeroStringInput
 {
-	c = KPCMakeCoordinatesComponents(@"-0.1 -0.02 3");
+	KPCCoordinatesComponents c = KPCMakeCoordinatesComponents(@"-0.1 -0.02 3");
 	XCTAssertTrue(c.theta == -0.1, @"Wrong component.");
 	XCTAssertTrue(c.phi == -0.02, @"Wrong component.");
 	XCTAssertTrue(c.units == KPCCoordinatesUnitsRadians, @"Wrong component, units is %lu.", c.units);
@@ -97,7 +97,7 @@
 
 - (void)testMakeWithCorrectNegativeZeroNumberInput
 {
-	c = KPCMakeCoordinatesComponents(@[@(-0.1), @(2.2), @(4)]);
+	KPCCoordinatesComponents c = KPCMakeCoordinatesComponents(@[@(-0.1), @(2.2), @(4)]);
 	XCTAssertTrue(c.theta == -0.1, @"Wrong component.");
 	XCTAssertTrue(c.phi == 2.2, @"Wrong component.");
 	XCTAssertTrue(c.units == KPCCoordinatesUnitsHours, @"Wrong component, units is %lu.", c.units);
@@ -105,7 +105,7 @@
 
 - (void)testMakeWithCorrectMultipleNegativeZeroNumberInput
 {
-	c = KPCMakeCoordinatesComponents(@[@(-0.1), @(-0.02), @(3)]);
+	KPCCoordinatesComponents c = KPCMakeCoordinatesComponents(@[@(-0.1), @(-0.02), @(3)]);
 	XCTAssertTrue(c.theta == -0.1, @"Wrong component.");
 	XCTAssertTrue(c.phi == -0.02, @"Wrong component.");
 	XCTAssertTrue(c.units == KPCCoordinatesUnitsRadians, @"Wrong component, units is %lu.", c.units);

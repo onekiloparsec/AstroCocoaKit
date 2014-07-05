@@ -18,6 +18,8 @@
 
 - (void)setUp
 {
+    [super setUp];
+    
     self.equatorialComponents = KPCMakeAstronomicalCoordinatesComponents(12.0242,
                                                                          -30.345,
                                                                          KPCCoordinatesUnitsHoursAndDegrees,
@@ -27,7 +29,7 @@
 
 - (void)tearDown
 {
-    self.equatorialComponents = NULL;
+    [super tearDown];
 }
 
 - (void)testStandardEpoch
@@ -46,7 +48,10 @@
 
 - (void)testPrecessionInputWithNonEquatorialSystem
 {
-    self.equatorialComponents.system = KPCAstronomicalCoordinatesSystemCelestial;
+    KPCAstronomicalCoordinatesComponents c1 = self.equatorialComponents;
+    c1.system = KPCAstronomicalCoordinatesSystemCelestial;
+    
+    KPCAstronomicalCoordinatesComponents c2;
     
 	XCTAssertThrows(KPCPrecessEquatorialCoordinatesComponents(&c1, &c2, 2001.03),
 					@"An input system different from Equatorial must throw an exception.");
@@ -54,9 +59,10 @@
 
 - (void)testPrecessionInputWithEquatorialSystemAndIdenticalEpoch
 {
+    KPCAstronomicalCoordinatesComponents c1 = self.equatorialComponents;
     KPCAstronomicalCoordinatesComponents c2;
     
-	XCTAssertNoThrow(KPCPrecessEquatorialCoordinatesComponents(&self.equatorialComponents, &c2, self.equatorialComponents.epoch),
+	XCTAssertNoThrow(KPCPrecessEquatorialCoordinatesComponents(&c1, &c2, c1.epoch),
 					 @"Providing valid input value must not throw an exception.");
 
 	XCTAssertTrue(self.equatorialComponents.base.theta == c2.base.theta, @"When final epoch is unchanged, output must be unchanged.");
