@@ -11,10 +11,24 @@
 #import "KPCScientificConstants.h"
 
 @interface KPCAstroCoordsComponentsTest : XCTestCase
-
+@property(nonatomic, assign) KPCAstronomicalCoordinatesComponents equatorialComponents;
 @end
 
 @implementation KPCAstroCoordsComponentsTest
+
+- (void)setUp
+{
+    self.equatorialComponents = KPCMakeAstronomicalCoordinatesComponents(12.0242,
+                                                                         -30.345,
+                                                                         KPCCoordinatesUnitsHoursAndDegrees,
+                                                                         2014.02,
+                                                                         KPCAstronomicalCoordinatesSystemEquatorial);
+}
+
+- (void)tearDown
+{
+    self.equatorialComponents = NULL;
+}
 
 - (void)testStandardEpoch
 {
@@ -23,36 +37,33 @@
 
 - (void)testMakeComponents
 {
-	KPCAstronomicalCoordinatesComponents c = KPCMakeAstronomicalCoordinatesComponents(1.0, 2.1, KPCCoordinatesUnitsHoursAndDegrees, 2014.02, KPCAstronomicalCoordinatesSystemEquatorial);
-
-	XCTAssertTrue(c.base.theta == 1.0, @"Wrong component storage");
-	XCTAssertTrue(c.base.phi == 2.1, @"Wrong component storage");
-	XCTAssertTrue(c.base.units == KPCCoordinatesUnitsHoursAndDegrees, @"Wrong component storage");
-	XCTAssertTrue(c.epoch == 2014.02, @"Wrong component storage");
-	XCTAssertTrue(c.system == KPCAstronomicalCoordinatesSystemEquatorial, @"Wrong component storage");
+	XCTAssertTrue(self.equatorialComponents.base.theta == 12.0242, @"Wrong component storage");
+	XCTAssertTrue(self.equatorialComponents.base.phi == -30.345, @"Wrong component storage");
+	XCTAssertTrue(self.equatorialComponents.base.units == KPCCoordinatesUnitsHoursAndDegrees, @"Wrong component storage");
+	XCTAssertTrue(self.equatorialComponents.epoch == 2014.02, @"Wrong component storage");
+	XCTAssertTrue(self.equatorialComponents.system == KPCAstronomicalCoordinatesSystemEquatorial, @"Wrong component storage");
 }
 
-- (void)testPrecessionInput
+- (void)testPrecessionInputWithNonEquatorialSystem
 {
-	KPCAstronomicalCoordinatesComponents c1, c2;
-	c1.base.theta = 12.0242;
-	c1.base.phi = -30.345;
-	c1.base.units = KPCCoordinatesUnitsHoursAndDegrees;
-	c1.epoch = 2001.0345;
-	c1.system = KPCAstronomicalCoordinatesSystemCelestial;
-
+    self.equatorialComponents.system = KPCAstronomicalCoordinatesSystemCelestial;
+    
 	XCTAssertThrows(KPCPrecessEquatorialCoordinatesComponents(&c1, &c2, 2001.03),
 					@"An input system different from Equatorial must throw an exception.");
+}
 
-	c1.system = KPCAstronomicalCoordinatesSystemEquatorial;
-	XCTAssertNoThrow(KPCPrecessEquatorialCoordinatesComponents(&c1, &c2, 2001.0345),
+- (void)testPrecessionInputWithEquatorialSystemAndIdenticalEpoch
+{
+    KPCAstronomicalCoordinatesComponents c2;
+    
+	XCTAssertNoThrow(KPCPrecessEquatorialCoordinatesComponents(&self.equatorialComponents, &c2, self.equatorialComponents.epoch),
 					 @"Providing valid input value must not throw an exception.");
 
-	XCTAssertTrue(c1.base.theta == c2.base.theta, @"When final epoch is unchanged, output must be unchanged.");
-	XCTAssertTrue(c1.base.phi == c2.base.phi, @"When final epoch is unchanged, output must be unchanged.");
-	XCTAssertTrue(c1.base.units == c2.base.units, @"When final epoch is unchanged, output must be unchanged.");
-	XCTAssertTrue(c1.epoch == c2.epoch, @"When final epoch is unchanged, output must be unchanged.");
-	XCTAssertTrue(c1.system == c2.system, @"When final epoch is unchanged, output must be unchanged.");
+	XCTAssertTrue(self.equatorialComponents.base.theta == c2.base.theta, @"When final epoch is unchanged, output must be unchanged.");
+	XCTAssertTrue(self.equatorialComponents.base.phi == c2.base.phi, @"When final epoch is unchanged, output must be unchanged.");
+	XCTAssertTrue(self.equatorialComponents.base.units == c2.base.units, @"When final epoch is unchanged, output must be unchanged.");
+	XCTAssertTrue(self.equatorialComponents.epoch == c2.epoch, @"When final epoch is unchanged, output must be unchanged.");
+	XCTAssertTrue(self.equatorialComponents.system == c2.system, @"When final epoch is unchanged, output must be unchanged.");
 }
 
 @end

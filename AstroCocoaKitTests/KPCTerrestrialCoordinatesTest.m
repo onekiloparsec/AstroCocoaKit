@@ -26,6 +26,7 @@
 
 	XCTAssertEqualWithAccuracy(coords.longitude, 10., 1e-12,
 							   @"Longitude internal conversion issue. Should be 10.0, got %f", coords.longitude);
+    
 	XCTAssertEqualWithAccuracy(coords.latitude, -30., 1e-12,
 							   @"Latitude internal conversion issue. Should be -30.0, got %f", coords.latitude);
 }

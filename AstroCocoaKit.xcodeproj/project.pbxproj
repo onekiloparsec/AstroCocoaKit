@@ -362,13 +362,13 @@
 		9FD38605195941ED0074D006 /* AstroCocoaKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				9FD3866D195944490074D006 /* KPCMoonTest.m */,
+				9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */,
 				9FD38676195945550074D006 /* KPCAstronomicalCoordinatesTest.m */,
 				9FD3866B195944490074D006 /* KPCAstroCoordsComponentsTest.m */,
-				9FD3866C195944490074D006 /* KPCCoordinatesComponentsTest.m */,
-				9FD3866D195944490074D006 /* KPCMoonTest.m */,
-				9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */,
 				9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */,
-				9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */,
+				9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */,
+				9FD3866C195944490074D006 /* KPCCoordinatesComponentsTest.m */,
 				9FD38606195941ED0074D006 /* Supporting Files */,
 			);
 			path = AstroCocoaKitTests;
