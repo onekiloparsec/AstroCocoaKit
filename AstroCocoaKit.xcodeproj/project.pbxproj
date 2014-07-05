@@ -7,6 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F98328919681E69008BCFA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F98328819681E69008BCFA3 /* Foundation.framework */; };
+		9F98329619681E69008BCFA3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD385FF195941ED0074D006 /* XCTest.framework */; };
+		9F98329719681E69008BCFA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F98328819681E69008BCFA3 /* Foundation.framework */; };
+		9F98329919681E69008BCFA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F98329819681E69008BCFA3 /* UIKit.framework */; };
+		9F98329C19681E69008BCFA3 /* libAstroCocoaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F98328719681E69008BCFA3 /* libAstroCocoaLib.a */; };
+		9F9832A219681E69008BCFA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F9832A019681E69008BCFA3 /* InfoPlist.strings */; };
+		9F9832AB19681E78008BCFA3 /* KPCMoonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866D195944490074D006 /* KPCMoonTest.m */; };
+		9F9832AC19681E78008BCFA3 /* KPCAstronomicalInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */; };
+		9F9832AD19681E78008BCFA3 /* KPCAstroCoordsComponentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866B195944490074D006 /* KPCAstroCoordsComponentsTest.m */; };
+		9F9832AE19681E78008BCFA3 /* KPCTerrestrialCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */; };
+		9F9832AF19681E78008BCFA3 /* KPCSphericalCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */; };
+		9F9832B019681E78008BCFA3 /* KPCCoordinatesComponentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866C195944490074D006 /* KPCCoordinatesComponentsTest.m */; };
+		9F9832B119681EA7008BCFA3 /* KPCCoordinatesComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3861B1959426F0074D006 /* KPCCoordinatesComponents.m */; };
+		9F9832B219681EA7008BCFA3 /* KPCAstronomicalCoordinatesComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386191959426F0074D006 /* KPCAstronomicalCoordinatesComponents.m */; };
+		9F9832B319681EA7008BCFA3 /* KPCSkyCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386251959426F0074D006 /* KPCSkyCoordinates.m */; };
+		9F9832B419681EA7008BCFA3 /* KPCSphericalCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386271959426F0074D006 /* KPCSphericalCoordinates.m */; };
+		9F9832B519681EA7008BCFA3 /* KPCTerrestrialCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3862B1959426F0074D006 /* KPCTerrestrialCoordinates.m */; };
+		9F9832B619681EA8008BCFA3 /* KPCAstronomicalCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386171959426F0074D006 /* KPCAstronomicalCoordinates.m */; };
+		9F9832B719681EA8008BCFA3 /* KPCAstronomicalCoordinates+Labels.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3865C195942F00074D006 /* KPCAstronomicalCoordinates+Labels.m */; };
+		9F9832B819681EB0008BCFA3 /* KPCEarth.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3861D1959426F0074D006 /* KPCEarth.m */; };
+		9F9832B919681EB0008BCFA3 /* KPCLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3861F1959426F0074D006 /* KPCLight.m */; };
+		9F9832BA19681EB0008BCFA3 /* KPCMoon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386211959426F0074D006 /* KPCMoon.m */; };
+		9F9832BB19681EB0008BCFA3 /* KPCSky.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386231959426F0074D006 /* KPCSky.m */; };
+		9F9832BC19681EB0008BCFA3 /* KPCSun.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386291959426F0074D006 /* KPCSun.m */; };
+		9F9832BD19681EB0008BCFA3 /* KPCTimes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3862D1959426F0074D006 /* KPCTimes.m */; };
+		9F9832BE19681EB7008BCFA3 /* KPCTwilightConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3862F1959426F0074D006 /* KPCTwilightConstants.m */; };
+		9F9832BF19681EB7008BCFA3 /* KPCTwilights.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386311959426F0074D006 /* KPCTwilights.m */; };
+		9F9832C019681EB7008BCFA3 /* KPCTwilightSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386331959426F0074D006 /* KPCTwilightSet.m */; };
+		9F9832C119681EB7008BCFA3 /* sunriset.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386361959426F0074D006 /* sunriset.c */; };
+		9F9832C219681ECB008BCFA3 /* KPCAstronomicalAge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF584A195EDEA3002F1C55 /* KPCAstronomicalAge.m */; };
+		9F9832C319681ECB008BCFA3 /* KPCAstronomicalAngularDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF584C195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.m */; };
+		9F9832C419681ECB008BCFA3 /* KPCAstronomicalColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF584E195EDEA3002F1C55 /* KPCAstronomicalColor.m */; };
+		9F9832C519681ECB008BCFA3 /* KPCAstronomicalDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5850195EDEA3002F1C55 /* KPCAstronomicalDistance.m */; };
+		9F9832C619681ECB008BCFA3 /* KPCAstronomicalEccentricity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5852195EDEA3002F1C55 /* KPCAstronomicalEccentricity.m */; };
+		9F9832C719681ECB008BCFA3 /* KPCAstronomicalEffectiveTemperature.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5854195EDEA3002F1C55 /* KPCAstronomicalEffectiveTemperature.m */; };
+		9F9832C819681ECB008BCFA3 /* KPCAstronomicalFlux.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5856195EDEA3002F1C55 /* KPCAstronomicalFlux.m */; };
+		9F9832C919681ECB008BCFA3 /* KPCAstronomicalInclination.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5858195EDEA3002F1C55 /* KPCAstronomicalInclination.m */; };
+		9F9832CA19681ECB008BCFA3 /* KPCAstronomicalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF585A195EDEA3002F1C55 /* KPCAstronomicalInfo.m */; };
+		9F9832CB19681EDF008BCFA3 /* KPCAstronomicalMass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF585F195EDEA3002F1C55 /* KPCAstronomicalMass.m */; };
+		9F9832CC19681EDF008BCFA3 /* KPCAstronomicalMetallicity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5861195EDEA3002F1C55 /* KPCAstronomicalMetallicity.m */; };
+		9F9832CD19681EDF008BCFA3 /* KPCAstronomicalMorphologicalType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5863195EDEA3002F1C55 /* KPCAstronomicalMorphologicalType.m */; };
+		9F9832CE19681EDF008BCFA3 /* KPCAstronomicalOrbitalPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5865195EDEA3002F1C55 /* KPCAstronomicalOrbitalPeriod.m */; };
+		9F9832CF19681EDF008BCFA3 /* KPCAstronomicalParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5867195EDEA3002F1C55 /* KPCAstronomicalParallax.m */; };
+		9F9832D019681EDF008BCFA3 /* KPCAstronomicalProperMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5869195EDEA3002F1C55 /* KPCAstronomicalProperMotion.m */; };
+		9F9832D119681EDF008BCFA3 /* KPCAstronomicalRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF586B195EDEA3002F1C55 /* KPCAstronomicalRadius.m */; };
+		9F9832D219681EDF008BCFA3 /* KPCAstronomicalSemiMajorAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF586D195EDEA3002F1C55 /* KPCAstronomicalSemiMajorAxis.m */; };
+		9F9832D319681EDF008BCFA3 /* KPCAstronomicalSpectralType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF586F195EDEA3002F1C55 /* KPCAstronomicalSpectralType.m */; };
+		9F9832D419681EDF008BCFA3 /* KPCAstronomicalVelocity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF5871195EDEA3002F1C55 /* KPCAstronomicalVelocity.m */; };
+		9F9832D519681EE3008BCFA3 /* NSDate+KPCTimes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD38668195943900074D006 /* NSDate+KPCTimes.m */; };
+		9F9832D619681EE3008BCFA3 /* NSNumber+KPCValueStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386351959426F0074D006 /* NSNumber+KPCValueStrings.m */; };
+		9F9832D719681F0D008BCFA3 /* KPCScientificConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3865E195942F00074D006 /* KPCScientificConstants.m */; };
 		9FBF5873195EDEA3002F1C55 /* KPCAstronomicalAge.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF5849195EDEA3002F1C55 /* KPCAstronomicalAge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FBF5874195EDEA3002F1C55 /* KPCAstronomicalAge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF584A195EDEA3002F1C55 /* KPCAstronomicalAge.m */; };
 		9FBF5875195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBF584B195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,6 +157,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9F98329A19681E69008BCFA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FD385DE195941ED0074D006 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F98328619681E69008BCFA3;
+			remoteInfo = AstroCocoaLib;
+		};
 		9FD38602195941ED0074D006 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9FD385DE195941ED0074D006 /* Project object */;
@@ -115,7 +173,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9F98328519681E69008BCFA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9F98328719681E69008BCFA3 /* libAstroCocoaLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAstroCocoaLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F98328819681E69008BCFA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F98328C19681E69008BCFA3 /* AstroCocoaLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AstroCocoaLib-Prefix.pch"; path = "../AstroCocoaLib/AstroCocoaLib-Prefix.pch"; sourceTree = "<group>"; };
+		9F98329519681E69008BCFA3 /* AstroCocoaLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstroCocoaLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F98329819681E69008BCFA3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9F98329F19681E69008BCFA3 /* AstroCocoaLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AstroCocoaLibTests-Info.plist"; sourceTree = "<group>"; };
+		9F9832A119681E69008BCFA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9FBF5849195EDEA3002F1C55 /* KPCAstronomicalAge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalAge.h; sourceTree = "<group>"; };
 		9FBF584A195EDEA3002F1C55 /* KPCAstronomicalAge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalAge.m; sourceTree = "<group>"; };
 		9FBF584B195EDEA3002F1C55 /* KPCAstronomicalAngularDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCAstronomicalAngularDistance.h; sourceTree = "<group>"; };
@@ -222,6 +299,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9F98328419681E69008BCFA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F98328919681E69008BCFA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F98329219681E69008BCFA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F98329619681E69008BCFA3 /* XCTest.framework in Frameworks */,
+				9F98329C19681E69008BCFA3 /* libAstroCocoaLib.a in Frameworks */,
+				9F98329919681E69008BCFA3 /* UIKit.framework in Frameworks */,
+				9F98329719681E69008BCFA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FD385E3195941ED0074D006 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,9 +339,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F98329E19681E69008BCFA3 /* Lib UnitTests Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F98329F19681E69008BCFA3 /* AstroCocoaLibTests-Info.plist */,
+				9F9832A019681E69008BCFA3 /* InfoPlist.strings */,
+			);
+			name = "Lib UnitTests Supporting Files";
+			path = ../AstroCocoaLibTests;
+			sourceTree = "<group>";
+		};
 		9FBF5848195EDE8C002F1C55 /* Infos */ = {
 			isa = PBXGroup;
 			children = (
+				9FBF585C195EDEA3002F1C55 /* KPCAstronomicalInfos.h */,
 				9FBF585D195EDEA3002F1C55 /* KPCAstronomicalInfoValueDescription.h */,
 				9FBF5872195EDEA3002F1C55 /* KPCSIMBADVOTableValueSetting.h */,
 				9FBF5849195EDEA3002F1C55 /* KPCAstronomicalAge.h */,
@@ -267,7 +374,6 @@
 				9FBF5859195EDEA3002F1C55 /* KPCAstronomicalInfo.h */,
 				9FBF585A195EDEA3002F1C55 /* KPCAstronomicalInfo.m */,
 				9FBF585B195EDEA3002F1C55 /* KPCAstronomicalInfo+Private.h */,
-				9FBF585C195EDEA3002F1C55 /* KPCAstronomicalInfos.h */,
 				9FBF585E195EDEA3002F1C55 /* KPCAstronomicalMass.h */,
 				9FBF585F195EDEA3002F1C55 /* KPCAstronomicalMass.m */,
 				9FBF5860195EDEA3002F1C55 /* KPCAstronomicalMetallicity.h */,
@@ -297,7 +403,7 @@
 			children = (
 				9FD385F0195941ED0074D006 /* AstroCocoaKit */,
 				9FD385F1195941ED0074D006 /* Supporting Files */,
-				9FD38605195941ED0074D006 /* AstroCocoaKitTests */,
+				9FD38605195941ED0074D006 /* Unit Tests */,
 				9FD385E9195941ED0074D006 /* Frameworks */,
 				9FD385E8195941ED0074D006 /* Products */,
 			);
@@ -308,6 +414,8 @@
 			children = (
 				9FD385E7195941ED0074D006 /* AstroCocoaKit.framework */,
 				9FD385FE195941ED0074D006 /* AstroCocoaKitTests.xctest */,
+				9F98328719681E69008BCFA3 /* libAstroCocoaLib.a */,
+				9F98329519681E69008BCFA3 /* AstroCocoaLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,6 +425,8 @@
 			children = (
 				9FD385EA195941ED0074D006 /* Cocoa.framework */,
 				9FD385FF195941ED0074D006 /* XCTest.framework */,
+				9F98328819681E69008BCFA3 /* Foundation.framework */,
+				9F98329819681E69008BCFA3 /* UIKit.framework */,
 				9FD385EC195941ED0074D006 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -354,12 +464,15 @@
 				9FD385F2195941ED0074D006 /* AstroCocoaKit-Info.plist */,
 				9FD385F3195941ED0074D006 /* InfoPlist.strings */,
 				9FD385F6195941ED0074D006 /* AstroCocoaKit-Prefix.pch */,
+				9F98328C19681E69008BCFA3 /* AstroCocoaLib-Prefix.pch */,
+				9FD38606195941ED0074D006 /* Kit UnitTests Supporting Files */,
+				9F98329E19681E69008BCFA3 /* Lib UnitTests Supporting Files */,
 			);
 			name = "Supporting Files";
 			path = AstroCocoaKit;
 			sourceTree = "<group>";
 		};
-		9FD38605195941ED0074D006 /* AstroCocoaKitTests */ = {
+		9FD38605195941ED0074D006 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
 				9FD3866D195944490074D006 /* KPCMoonTest.m */,
@@ -369,19 +482,20 @@
 				9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */,
 				9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */,
 				9FD3866C195944490074D006 /* KPCCoordinatesComponentsTest.m */,
-				9FD38606195941ED0074D006 /* Supporting Files */,
 			);
+			name = "Unit Tests";
 			path = AstroCocoaKitTests;
 			sourceTree = "<group>";
 		};
-		9FD38606195941ED0074D006 /* Supporting Files */ = {
+		9FD38606195941ED0074D006 /* Kit UnitTests Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				9FD38607195941ED0074D006 /* AstroCocoaKitTests-Info.plist */,
 				9FD38608195941ED0074D006 /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
+			name = "Kit UnitTests Supporting Files";
+			path = AstroCocoaKitTests;
+			sourceTree = SOURCE_ROOT;
 		};
 		9FD386631959430C0074D006 /* Coordinates */ = {
 			isa = PBXGroup;
@@ -432,8 +546,8 @@
 				9FD386311959426F0074D006 /* KPCTwilights.m */,
 				9FD386321959426F0074D006 /* KPCTwilightSet.h */,
 				9FD386331959426F0074D006 /* KPCTwilightSet.m */,
-				9FD386361959426F0074D006 /* sunriset.c */,
 				9FD386371959426F0074D006 /* sunriset.h */,
+				9FD386361959426F0074D006 /* sunriset.c */,
 			);
 			name = Twilights;
 			sourceTree = "<group>";
@@ -506,6 +620,41 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9F98328619681E69008BCFA3 /* AstroCocoaLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F9832A519681E69008BCFA3 /* Build configuration list for PBXNativeTarget "AstroCocoaLib" */;
+			buildPhases = (
+				9F98328319681E69008BCFA3 /* Sources */,
+				9F98328419681E69008BCFA3 /* Frameworks */,
+				9F98328519681E69008BCFA3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AstroCocoaLib;
+			productName = AstroCocoaLib;
+			productReference = 9F98328719681E69008BCFA3 /* libAstroCocoaLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9F98329419681E69008BCFA3 /* AstroCocoaLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F9832A819681E69008BCFA3 /* Build configuration list for PBXNativeTarget "AstroCocoaLibTests" */;
+			buildPhases = (
+				9F98329119681E69008BCFA3 /* Sources */,
+				9F98329219681E69008BCFA3 /* Frameworks */,
+				9F98329319681E69008BCFA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F98329B19681E69008BCFA3 /* PBXTargetDependency */,
+			);
+			name = AstroCocoaLibTests;
+			productName = AstroCocoaLibTests;
+			productReference = 9F98329519681E69008BCFA3 /* AstroCocoaLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9FD385E6195941ED0074D006 /* AstroCocoaKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FD3860F195941ED0074D006 /* Build configuration list for PBXNativeTarget "AstroCocoaKit" */;
@@ -552,6 +701,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = onekiloparsec;
 				TargetAttributes = {
+					9F98329419681E69008BCFA3 = {
+						TestTargetID = 9F98328619681E69008BCFA3;
+					};
 					9FD385FD195941ED0074D006 = {
 						TestTargetID = 9FD385E6195941ED0074D006;
 					};
@@ -571,11 +723,21 @@
 			targets = (
 				9FD385E6195941ED0074D006 /* AstroCocoaKit */,
 				9FD385FD195941ED0074D006 /* AstroCocoaKitTests */,
+				9F98328619681E69008BCFA3 /* AstroCocoaLib */,
+				9F98329419681E69008BCFA3 /* AstroCocoaLibTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F98329319681E69008BCFA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9832A219681E69008BCFA3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FD385E5195941ED0074D006 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,6 +758,65 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9F98328319681E69008BCFA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9832B419681EA7008BCFA3 /* KPCSphericalCoordinates.m in Sources */,
+				9F9832D319681EDF008BCFA3 /* KPCAstronomicalSpectralType.m in Sources */,
+				9F9832C919681ECB008BCFA3 /* KPCAstronomicalInclination.m in Sources */,
+				9F9832C019681EB7008BCFA3 /* KPCTwilightSet.m in Sources */,
+				9F9832C219681ECB008BCFA3 /* KPCAstronomicalAge.m in Sources */,
+				9F9832CF19681EDF008BCFA3 /* KPCAstronomicalParallax.m in Sources */,
+				9F9832BA19681EB0008BCFA3 /* KPCMoon.m in Sources */,
+				9F9832B219681EA7008BCFA3 /* KPCAstronomicalCoordinatesComponents.m in Sources */,
+				9F9832CB19681EDF008BCFA3 /* KPCAstronomicalMass.m in Sources */,
+				9F9832D419681EDF008BCFA3 /* KPCAstronomicalVelocity.m in Sources */,
+				9F9832BC19681EB0008BCFA3 /* KPCSun.m in Sources */,
+				9F9832C719681ECB008BCFA3 /* KPCAstronomicalEffectiveTemperature.m in Sources */,
+				9F9832B519681EA7008BCFA3 /* KPCTerrestrialCoordinates.m in Sources */,
+				9F9832CC19681EDF008BCFA3 /* KPCAstronomicalMetallicity.m in Sources */,
+				9F9832B319681EA7008BCFA3 /* KPCSkyCoordinates.m in Sources */,
+				9F9832CA19681ECB008BCFA3 /* KPCAstronomicalInfo.m in Sources */,
+				9F9832C819681ECB008BCFA3 /* KPCAstronomicalFlux.m in Sources */,
+				9F9832CD19681EDF008BCFA3 /* KPCAstronomicalMorphologicalType.m in Sources */,
+				9F9832D019681EDF008BCFA3 /* KPCAstronomicalProperMotion.m in Sources */,
+				9F9832D119681EDF008BCFA3 /* KPCAstronomicalRadius.m in Sources */,
+				9F9832BE19681EB7008BCFA3 /* KPCTwilightConstants.m in Sources */,
+				9F9832D219681EDF008BCFA3 /* KPCAstronomicalSemiMajorAxis.m in Sources */,
+				9F9832C119681EB7008BCFA3 /* sunriset.c in Sources */,
+				9F9832CE19681EDF008BCFA3 /* KPCAstronomicalOrbitalPeriod.m in Sources */,
+				9F9832B619681EA8008BCFA3 /* KPCAstronomicalCoordinates.m in Sources */,
+				9F9832D719681F0D008BCFA3 /* KPCScientificConstants.m in Sources */,
+				9F9832B919681EB0008BCFA3 /* KPCLight.m in Sources */,
+				9F9832BD19681EB0008BCFA3 /* KPCTimes.m in Sources */,
+				9F9832BB19681EB0008BCFA3 /* KPCSky.m in Sources */,
+				9F9832B119681EA7008BCFA3 /* KPCCoordinatesComponents.m in Sources */,
+				9F9832B719681EA8008BCFA3 /* KPCAstronomicalCoordinates+Labels.m in Sources */,
+				9F9832C619681ECB008BCFA3 /* KPCAstronomicalEccentricity.m in Sources */,
+				9F9832B819681EB0008BCFA3 /* KPCEarth.m in Sources */,
+				9F9832C319681ECB008BCFA3 /* KPCAstronomicalAngularDistance.m in Sources */,
+				9F9832C419681ECB008BCFA3 /* KPCAstronomicalColor.m in Sources */,
+				9F9832BF19681EB7008BCFA3 /* KPCTwilights.m in Sources */,
+				9F9832D619681EE3008BCFA3 /* NSNumber+KPCValueStrings.m in Sources */,
+				9F9832C519681ECB008BCFA3 /* KPCAstronomicalDistance.m in Sources */,
+				9F9832D519681EE3008BCFA3 /* NSDate+KPCTimes.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F98329119681E69008BCFA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9832AD19681E78008BCFA3 /* KPCAstroCoordsComponentsTest.m in Sources */,
+				9F9832AE19681E78008BCFA3 /* KPCTerrestrialCoordinatesTest.m in Sources */,
+				9F9832AF19681E78008BCFA3 /* KPCSphericalCoordinatesTest.m in Sources */,
+				9F9832AC19681E78008BCFA3 /* KPCAstronomicalInfoTest.m in Sources */,
+				9F9832B019681E78008BCFA3 /* KPCCoordinatesComponentsTest.m in Sources */,
+				9F9832AB19681E78008BCFA3 /* KPCMoonTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FD385E2195941ED0074D006 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -658,6 +879,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9F98329B19681E69008BCFA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F98328619681E69008BCFA3 /* AstroCocoaLib */;
+			targetProxy = 9F98329A19681E69008BCFA3 /* PBXContainerItemProxy */;
+		};
 		9FD38603195941ED0074D006 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9FD385E6195941ED0074D006 /* AstroCocoaKit */;
@@ -666,6 +892,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9F9832A019681E69008BCFA3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F9832A119681E69008BCFA3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		9FD385F3195941ED0074D006 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -685,6 +919,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9F9832A619681E69008BCFA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AstroCocoaLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AstroCocoaLib/AstroCocoaLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9F9832A719681E69008BCFA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AstroCocoaLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AstroCocoaLib/AstroCocoaLib-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F9832A919681E69008BCFA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AstroCocoaLib/AstroCocoaLib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AstroCocoaLibTests/AstroCocoaLibTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9F9832AA19681E69008BCFA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AstroCocoaLib/AstroCocoaLib-Prefix.pch";
+				INFOPLIST_FILE = "AstroCocoaLibTests/AstroCocoaLibTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		9FD3860D195941ED0074D006 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -790,7 +1098,6 @@
 		9FD38613195941ED0074D006 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AstroCocoaKit.framework/Versions/A/AstroCocoaKit";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -804,7 +1111,6 @@
 				);
 				INFOPLIST_FILE = "AstroCocoaKitTests/AstroCocoaKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -812,7 +1118,6 @@
 		9FD38614195941ED0074D006 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AstroCocoaKit.framework/Versions/A/AstroCocoaKit";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -822,7 +1127,6 @@
 				GCC_PREFIX_HEADER = "AstroCocoaKit/AstroCocoaKit-Prefix.pch";
 				INFOPLIST_FILE = "AstroCocoaKitTests/AstroCocoaKitTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -830,6 +1134,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9F9832A519681E69008BCFA3 /* Build configuration list for PBXNativeTarget "AstroCocoaLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F9832A619681E69008BCFA3 /* Debug */,
+				9F9832A719681E69008BCFA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F9832A819681E69008BCFA3 /* Build configuration list for PBXNativeTarget "AstroCocoaLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F9832A919681E69008BCFA3 /* Debug */,
+				9F9832AA19681E69008BCFA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9FD385E1195941ED0074D006 /* Build configuration list for PBXProject "AstroCocoaKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
