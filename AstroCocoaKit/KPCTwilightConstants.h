@@ -7,19 +7,19 @@
 //
 
 typedef NS_ENUM(NSUInteger, KPCTwilightMode) {
-	KPCTwilightModeAstronomical,
+    KPCTwilightModeEnumBegin = 0,
+	KPCTwilightModeAstronomical = KPCTwilightModeBegin,
 	KPCTwilightModeNautical,
 	KPCTwilightModeCivilian,
 	KPCTwilightModeSunsetSunrise,
+	KPCTwilightModeEnumEnd,
+    KPCTwilightModeCount = KPCTwilightModeEnumEnd - KPCTwilightModeEnumBegin
 };
-
-extern NSUInteger const KPCTwilightModeCount;
 
 extern double const KPCTwilightAstronomicalSunAltitude;
 extern double const KPCTwilightNauticalSunAltitude;
 extern double const KPCTwilightCivilianSunAltitude;
 extern double const KPCTwilightSetRiseSunAltitude;
 
-extern double const KPCTwilightModeAltitudes[4];
+extern double const KPCTwilightModeAltitudes[KPCTwilightModeCount];
 
-#define KPCTwilightModesCount (sizeof(KPCTwilightModeAltitudes)/sizeof(KPCTwilightModeAltitudes[0]))

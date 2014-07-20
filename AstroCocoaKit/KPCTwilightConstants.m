@@ -14,9 +14,7 @@ double const KPCTwilightCivilianSunAltitude		=  -6.0;
 double const KPCTwilightSetRiseSunAltitude		=  -0.5833333333333;
 // See also http://www.sunearthtools.com/dp/tools/pos_sun.php for the last value
 
-NSUInteger const KPCTwilightModeCount = 4;
-
-double const KPCTwilightModeAltitudes[4] = {
+double const KPCTwilightModeAltitudes[KPCTwilightModeCount] = {
 	KPCTwilightAstronomicalSunAltitude,
 	KPCTwilightNauticalSunAltitude,
 	KPCTwilightCivilianSunAltitude,
