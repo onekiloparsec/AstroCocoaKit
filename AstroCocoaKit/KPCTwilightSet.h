@@ -29,6 +29,7 @@
 - (double)eveningTwilightJulianDayForMode:(KPCTwilightMode)mode;
 - (double)morningTwilightJulianDayForMode:(KPCTwilightMode)mode;
 
-//- (STLSmartColor *)skyColorForDate:(NSDate *)date;
+- (double)julianDayOfMidnight;
+- (double)julianDayOfLongitudeMidnight;
 
 @end

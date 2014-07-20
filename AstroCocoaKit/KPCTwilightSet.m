@@ -204,29 +204,32 @@ KPCTwilightCache KPCMakeEmptyTwilightCache(void) {
 	return _cache.morningJulianDays[mode];
 }
 
-//- (STLSmartColor *)skyColorForDate:(NSDate *)date
-//{
-//    if ([date timeIntervalSinceDate:_date] < 0.0 || [date timeIntervalSinceDate:_date] > DAY2SEC) {
-//        return nil;
-//    }
-//    
-//    double jd = julianDayForDate(date);
-//    
-//    if (jd <= _cache.eveningJulianDays[0] || jd > _cache.morningJulianDays[3]) {
-//        return [STLSmartColor daylightColor];
-//    }
-//    else if (jd <= _cache.eveningJulianDays[1] || jd > _cache.morningJulianDays[2]) {
-//        return [STLSmartColor civilianTwilightColor];
-//    }
-//    else if (jd <= _cache.eveningJulianDays[2] || jd > _cache.morningJulianDays[1]) {
-//        return [STLSmartColor nauticalTwilightColor];
-//    }
-//    else if (jd <= _cache.eveningJulianDays[3] || jd > _cache.morningJulianDays[0]) {
-//        return [STLSmartColor astronomicalTwilightColor];
-//    }
-//
-//    return nil;
-//}
+- (double)julianDayOfMidnight
+{
+    if (_cache.sunMinimumAltitude == NOT_A_SCIENTIFIC_NUMBER) {
+        return NOT_A_SCIENTIFIC_NUMBER;
+    }
+    else if (_cache.sunMinimumAltitude <= KPCTwilightAstronomicalSunAltitude) {
+        return (_cache.eveningJulianDays[KPCTwilightModeAstronomical] + _cache.morningJulianDays[KPCTwilightModeAstronomical])/2.0;
+    }
+    else if (_cache.sunMinimumAltitude <= KPCTwilightNauticalSunAltitude) {
+        return (_cache.eveningJulianDays[KPCTwilightModeNautical] + _cache.morningJulianDays[KPCTwilightModeNautical])/2.0;
+    }
+    else if (_cache.sunMinimumAltitude <= KPCTwilightCivilianSunAltitude) {
+        return (_cache.eveningJulianDays[KPCTwilightModeCivilian] + _cache.morningJulianDays[KPCTwilightModeCivilian])/2.0;
+    }
+    else if (_cache.sunMinimumAltitude <= KPCTwilightSetRiseSunAltitude) {
+        return (_cache.eveningJulianDays[KPCTwilightModeSunsetSunrise] + _cache.morningJulianDays[KPCTwilightModeSunsetSunrise])/2.0;
+    }
+    else {
+        return NOT_A_SCIENTIFIC_NUMBER;
+    }
+}
+
+- (double)julianDayOfLongitudeMidnight
+{
+	return [self.noonDate julianDayOfLocalMidnightForLongitude:_coords.longitude];
+}
 
 @end
 

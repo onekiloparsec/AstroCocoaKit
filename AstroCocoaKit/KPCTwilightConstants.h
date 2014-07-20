@@ -6,9 +6,10 @@
 //  Released under licence GPL v2
 //
 
+static NSUInteger const KPCTwilightModeEnumBegin = 0;
+
 typedef NS_ENUM(NSUInteger, KPCTwilightMode) {
-    KPCTwilightModeEnumBegin = 0,
-	KPCTwilightModeAstronomical = KPCTwilightModeBegin,
+	KPCTwilightModeAstronomical = KPCTwilightModeEnumBegin,
 	KPCTwilightModeNautical,
 	KPCTwilightModeCivilian,
 	KPCTwilightModeSunsetSunrise,
