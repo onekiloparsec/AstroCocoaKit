@@ -29,7 +29,7 @@ double sunMeanLongitudeForJulianDay(double jd)
 	return L;
 }
 
-KPCCoordinatesComponents sunCoordinatesComponentsForJulianDay(double jd)
+KPCAstronomicalCoordinatesComponents sunCoordinatesComponentsForJulianDay(double jd)
 {
     // Low precision formula from Almanac. See also J. Thorstensen (skycalc)
 	// ra and dec must be decimal (hours and degrees respectively).
@@ -51,24 +51,29 @@ KPCCoordinatesComponents sunCoordinatesComponentsForJulianDay(double jd)
 	}
 	double Dec = asin(z);
 
-	KPCCoordinatesComponents elements;
-    elements.theta = RA * RAD2HOUR;
-    elements.phi = Dec * RAD2DEG;
-    elements.units = KPCCoordinatesUnitsHoursAndDegrees;
+	KPCCoordinatesComponents base;
+    base.theta = RA * RAD2HOUR;
+    base.phi = Dec * RAD2DEG;
+    base.units = KPCCoordinatesUnitsHoursAndDegrees;
 
-	return elements;
+    KPCAstronomicalCoordinatesComponents components;
+    components.base = base;
+    components.epoch = KPCJulianEpochStandard();
+    components.system = KPCAstronomicalCoordinatesSystemEquatorial;
+    
+	return components;
 }
 
 double sunAzimuthForJulianDayLongitudeLatitude(double jd, double longitude, double latitude)
 {
-	KPCCoordinatesComponents elements = sunCoordinatesComponentsForJulianDay(jd);
-    return KPCSkyAzimuthForJulianDayRADecLongitudeLatitude(jd, elements.theta, elements.phi, longitude, latitude);
+	KPCAstronomicalCoordinatesComponents components = sunCoordinatesComponentsForJulianDay(jd);
+    return KPCSkyAzimuthForJulianDayRADecLongitudeLatitude(jd, components.base.theta, components.base.phi, longitude, latitude);
 }
 
 double sunAltitudeForJulianDayLongitudeLatitude(double jd, double longitude, double latitude)
 {
-	KPCCoordinatesComponents elements = sunCoordinatesComponentsForJulianDay(jd);
-    return KPCSkyAltitudeForJulianDayRADecLongitudeLatitude(jd, elements.theta, elements.phi, longitude, latitude);
+	KPCAstronomicalCoordinatesComponents components = sunCoordinatesComponentsForJulianDay(jd);
+    return KPCSkyAltitudeForJulianDayRADecLongitudeLatitude(jd, components.base.theta, components.base.phi, longitude, latitude);
 }
 
 // See Jean Meeus' Astronomical Algorithms p. 178 Table 27.B

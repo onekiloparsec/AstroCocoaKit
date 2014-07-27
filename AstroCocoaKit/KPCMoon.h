@@ -7,6 +7,7 @@
 //
 
 #import "KPCCoordinatesComponents.h"
+#import "KPCAstronomicalCoordinatesComponents.h"
 
 double moonLongitudePeriodicTerms(double D, double M, double Mprime, double Lprime, double F, double julianDay);
 double moonLatitudePeriodicTerms(double D, double M, double Mprime, double Lprime, double F, double julianDay);
@@ -17,7 +18,7 @@ double moonMeanElongation(double julianDay); //
 double moonMeanAnomaly(double julianDay);
 double moonArgumentOfLatitude(double julianDay);
 
-KPCCoordinatesComponents moonCoordinatesElementsForJulianDay(double julianDay);
+KPCAstronomicalCoordinatesComponents moonCoordinatesElementsForJulianDay(double julianDay);
 
 double moonAltitudeForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords);
 double moonAzimuthForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords);

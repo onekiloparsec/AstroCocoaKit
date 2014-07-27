@@ -17,7 +17,7 @@ typedef struct KPCSexagesimalComponents {
 
 // NEVER change order of enums, as this will break existing (keyed) coordinates archives.
 
-typedef NS_ENUM(NSUInteger, KPCCoordinatesUnits) {
+typedef NS_ENUM(NSInteger, KPCCoordinatesUnits) {
 	KPCCoordinatesUnitsUndefined,
 	KPCCoordinatesUnitsHoursAndDegrees, // For RA and Dec.
 	KPCCoordinatesUnitsDefault,
@@ -48,3 +48,5 @@ void KPCTransformCoordinatesComponentsUnits(KPCCoordinatesComponents *inComponen
 											KPCCoordinatesComponents *outComponents,
 											KPCCoordinatesUnits outputUnits);
 
+
+double greatCircleAngularDistance(KPCCoordinatesComponents c1, KPCCoordinatesComponents c2);

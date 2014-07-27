@@ -26,6 +26,70 @@ double KPCJulianEpochB1950(void)
 	return STANDARD_JULIAN_EPOCH + (JULIAN_DAY_B1950_0 - J2000)/AVERAGE_JULIAN_YEAR;
 }
 
+NSString *positionAngleString(double value)
+{
+    value = fmod(value + 360.0, 360.0);
+    
+	NSString *s = nil;
+	if (value > 337.5 || value <= 22.5) {
+		s = @"N";
+	}
+	else if (value > 22.5 && value <= 67.5) {
+		s = @"NE";
+	}
+	else if (value > 67.5 && value <= 112.5) {
+		s = @"E";
+	}
+	else if (value > 112.5 && value <= 157.5) {
+		s = @"SE";
+	}
+	else if (value > 157.5 && value <= 202.5) {
+		s = @"S";
+	}
+	else if (value > 202.5 && value <= 247.5) {
+		s = @"SW";
+	}
+	else if (value > 247.5 && value <= 292.5) {
+		s = @"W";
+	}
+	else if (value > 292.5 && value <= 337.5) {
+		s = @"NW";
+	}
+	else {
+		s = @"?";
+	}
+    
+	return s;
+}
+
+NSString *shortPositionAngleString(double value)
+{
+	return [NSString stringWithFormat:@"PA %.0fº - %@",
+			value, shortPositionAngleString(value)];
+}
+
+NSString *separationAngleString(double value)
+{
+	if (value >= 10.0) {
+		return [NSString stringWithFormat:@"%.0fº", value];
+	}
+	else if (value >= 2.0 && value < 10.0) {
+		return [NSString stringWithFormat:@"%.1fº", value];
+	}
+	else if (value >= 0.5 && value < 2.0) {
+		return [NSString stringWithFormat:@"%.2fº", value];
+	}
+	else if (value >= 0.1 && value < 0.5) {
+		return [NSString stringWithFormat:@"%.1f'", value*60];
+	}
+	else if (value >= 0.01 && value < 0.1) {
+		return [NSString stringWithFormat:@"%.2f'", value*60];
+	}
+	else {
+		return [NSString stringWithFormat:@"%.2f'", value*60];
+	}
+}
+
 NSString *KPCAstronomicalCoordinatesSystemName(KPCAstronomicalCoordinatesSystem system)
 {
 	if (system == KPCAstronomicalCoordinatesSystemEquatorial) {

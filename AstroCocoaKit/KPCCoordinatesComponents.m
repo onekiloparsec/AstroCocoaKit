@@ -9,6 +9,20 @@
 #import "KPCCoordinatesComponents.h"
 #import "KPCScientificConstants.h"
 
+// Haversine function. See p115 in AA.
+static inline double hav(double theta)
+{
+	//	return (1.0 - cos(theta))/2.0;
+	return sin(theta/2.0)*sin(theta/2.0);
+}
+
+// Inverse haversine function.
+static inline double ahav(double x)
+{
+	//	return acos(1.0-2.0*x);
+	return 2.0 * asin(sqrt(x));
+}
+
 KPCCoordinatesComponents KPCMakeCoordinatesComponents(id input)
 {
 	// We rely on the fact that the Foundation 'doubleValue' method (and related methods)
@@ -328,3 +342,43 @@ void KPCTransformCoordinatesComponentsUnits(KPCCoordinatesComponents *inComponen
 			break;
 	}
 }
+
+// See http://wiki.astrogrid.org/bin/view/Astrogrid/CelestialCoordinates
+double greatCircleAngularDistance(KPCCoordinatesComponents c1, KPCCoordinatesComponents c2)
+{
+	double scale = 1.0;
+	switch (c1.units) {
+		case KPCCoordinatesUnitsDegrees:
+			scale = DEG2RAD;
+			break;
+		case KPCCoordinatesUnitsHours:
+			scale = HOUR2RAD;
+			break;
+		default:
+			break;
+	}
+    
+	double otherScale = 1.0;
+	switch (c2.units) {
+		case KPCCoordinatesUnitsDegrees:
+			otherScale = DEG2RAD;
+			break;
+		case KPCCoordinatesUnitsHours:
+			otherScale = HOUR2RAD;
+			break;
+		default:
+			break;
+	}
+    
+	double dec1 = c1.phi * scale;
+	double dec2 = c2.phi * otherScale;
+	double ra1  = c1.theta * scale;
+	double ra2  = c2.theta * otherScale;
+    
+	double t1 = hav(dec1-dec2);
+	double t2 = cos(dec1)*cos(dec2)*hav(ra1-ra2);
+	double result = ahav(t1 + t2); // radians
+    
+	return result * RAD2DEG;
+}
+

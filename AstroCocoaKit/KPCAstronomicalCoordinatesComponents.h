@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "KPCCoordinatesComponents.h"
 
-typedef NS_ENUM(NSUInteger, KPCAstronomicalCoordinatesSystem) {
+typedef NS_ENUM(NSInteger, KPCAstronomicalCoordinatesSystem) {
 	KPCAstronomicalCoordinatesSystemEquatorial,
 	KPCAstronomicalCoordinatesSystemCelestial,
 	KPCAstronomicalCoordinatesSystemGalactic,
 	KPCAstronomicalCoordinatesSystemLocalHorizontal
 };
 
-typedef NS_ENUM(NSUInteger, KPCAstronomicalCoordinatesEpoch) {
+typedef NS_ENUM(NSInteger, KPCAstronomicalCoordinatesEpoch) {
 	KPCAstronomicalCoordinatesEpochJ2000,
 	KPCAstronomicalCoordinatesEpochB1950,
 	KPCAstronomicalCoordinatesEpochNow,
@@ -32,6 +32,10 @@ typedef struct KPCAstronomicalCoordinatesComponents {
 double KPCJulianEpochStandard(void);
 double KPCJulianEpochCurrent(void);
 double KPCJulianEpochB1950(void);
+
+NSString *positionAngleString(double value);
+NSString *shortPositionAngleString(double value);
+NSString *separationAngleString(double value);
 
 NSString *KPCAstronomicalCoordinatesSystemName(KPCAstronomicalCoordinatesSystem system);
 
