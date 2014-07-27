@@ -14,10 +14,7 @@
 		9F98329C19681E69008BCFA3 /* libAstroCocoaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F98328719681E69008BCFA3 /* libAstroCocoaLib.a */; };
 		9F9832A219681E69008BCFA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F9832A019681E69008BCFA3 /* InfoPlist.strings */; };
 		9F9832AB19681E78008BCFA3 /* KPCMoonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866D195944490074D006 /* KPCMoonTest.m */; };
-		9F9832AC19681E78008BCFA3 /* KPCAstronomicalInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */; };
 		9F9832AD19681E78008BCFA3 /* KPCAstroCoordsComponentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866B195944490074D006 /* KPCAstroCoordsComponentsTest.m */; };
-		9F9832AE19681E78008BCFA3 /* KPCTerrestrialCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */; };
-		9F9832AF19681E78008BCFA3 /* KPCSphericalCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */; };
 		9F9832B019681E78008BCFA3 /* KPCCoordinatesComponentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866C195944490074D006 /* KPCCoordinatesComponentsTest.m */; };
 		9F9832B119681EA7008BCFA3 /* KPCCoordinatesComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3861B1959426F0074D006 /* KPCCoordinatesComponents.m */; };
 		9F9832B219681EA7008BCFA3 /* KPCAstronomicalCoordinatesComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386191959426F0074D006 /* KPCAstronomicalCoordinatesComponents.m */; };
@@ -33,7 +30,6 @@
 		9F9832D519681EE3008BCFA3 /* NSDate+KPCTimes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD38668195943900074D006 /* NSDate+KPCTimes.m */; };
 		9F9832D619681EE3008BCFA3 /* NSNumber+KPCValueStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD386351959426F0074D006 /* NSNumber+KPCValueStrings.m */; };
 		9F9832D719681F0D008BCFA3 /* KPCScientificConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3865E195942F00074D006 /* KPCScientificConstants.m */; };
-		9FBF589E195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */; };
 		9FBF58A0195EE06A002F1C55 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9FBF589F195EE06A002F1C55 /* README.md */; };
 		9FD385EB195941ED0074D006 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD385EA195941ED0074D006 /* Cocoa.framework */; };
 		9FD385F5195941ED0074D006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FD385F3195941ED0074D006 /* InfoPlist.strings */; };
@@ -73,8 +69,6 @@
 		9FD38670195944490074D006 /* KPCAstroCoordsComponentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866B195944490074D006 /* KPCAstroCoordsComponentsTest.m */; };
 		9FD38671195944490074D006 /* KPCCoordinatesComponentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866C195944490074D006 /* KPCCoordinatesComponentsTest.m */; };
 		9FD38672195944490074D006 /* KPCMoonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866D195944490074D006 /* KPCMoonTest.m */; };
-		9FD38673195944490074D006 /* KPCSphericalCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */; };
-		9FD38674195944490074D006 /* KPCTerrestrialCoordinatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +108,6 @@
 		9F98329819681E69008BCFA3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9F98329F19681E69008BCFA3 /* AstroCocoaLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AstroCocoaLibTests-Info.plist"; sourceTree = "<group>"; };
 		9F9832A119681E69008BCFA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalInfoTest.m; sourceTree = "<group>"; };
 		9FBF589F195EE06A002F1C55 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		9FD385E7195941ED0074D006 /* AstroCocoaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AstroCocoaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD385EA195941ED0074D006 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -160,9 +153,6 @@
 		9FD3866B195944490074D006 /* KPCAstroCoordsComponentsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstroCoordsComponentsTest.m; sourceTree = "<group>"; };
 		9FD3866C195944490074D006 /* KPCCoordinatesComponentsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCCoordinatesComponentsTest.m; sourceTree = "<group>"; };
 		9FD3866D195944490074D006 /* KPCMoonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCMoonTest.m; sourceTree = "<group>"; };
-		9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCSphericalCoordinatesTest.m; sourceTree = "<group>"; };
-		9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCTerrestrialCoordinatesTest.m; sourceTree = "<group>"; };
-		9FD38676195945550074D006 /* KPCAstronomicalCoordinatesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCAstronomicalCoordinatesTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,11 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD3866D195944490074D006 /* KPCMoonTest.m */,
-				9FBF589D195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m */,
-				9FD38676195945550074D006 /* KPCAstronomicalCoordinatesTest.m */,
 				9FD3866B195944490074D006 /* KPCAstroCoordsComponentsTest.m */,
-				9FD3866F195944490074D006 /* KPCTerrestrialCoordinatesTest.m */,
-				9FD3866E195944490074D006 /* KPCSphericalCoordinatesTest.m */,
 				9FD3866C195944490074D006 /* KPCCoordinatesComponentsTest.m */,
 			);
 			name = "Unit Tests";
@@ -560,9 +546,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9832AD19681E78008BCFA3 /* KPCAstroCoordsComponentsTest.m in Sources */,
-				9F9832AE19681E78008BCFA3 /* KPCTerrestrialCoordinatesTest.m in Sources */,
-				9F9832AF19681E78008BCFA3 /* KPCSphericalCoordinatesTest.m in Sources */,
-				9F9832AC19681E78008BCFA3 /* KPCAstronomicalInfoTest.m in Sources */,
 				9F9832B019681E78008BCFA3 /* KPCCoordinatesComponentsTest.m in Sources */,
 				9F9832AB19681E78008BCFA3 /* KPCMoonTest.m in Sources */,
 			);
@@ -593,9 +576,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FBF589E195EDEC0002F1C55 /* KPCAstronomicalInfoTest.m in Sources */,
-				9FD38673195944490074D006 /* KPCSphericalCoordinatesTest.m in Sources */,
-				9FD38674195944490074D006 /* KPCTerrestrialCoordinatesTest.m in Sources */,
 				9FD38671195944490074D006 /* KPCCoordinatesComponentsTest.m in Sources */,
 				9FD38670195944490074D006 /* KPCAstroCoordsComponentsTest.m in Sources */,
 				9FD38672195944490074D006 /* KPCMoonTest.m in Sources */,
