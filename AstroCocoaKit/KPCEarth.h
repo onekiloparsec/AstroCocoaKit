@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KPCCoordinatesComponents.h"
 
-@class KPCTerrestrialCoordinates;
-
-double accurateEarthPointsSeparationDistance(KPCTerrestrialCoordinates *c1, KPCTerrestrialCoordinates *c2);
+double accurateEarthPointsSeparationDistance(KPCCoordinatesComponents c1, KPCCoordinatesComponents c2);
 

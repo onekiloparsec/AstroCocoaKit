@@ -22,12 +22,6 @@
 #import "KPCCoordinatesComponents.h"
 #import "KPCAstronomicalCoordinatesComponents.h"
 
-#import "KPCSphericalCoordinates.h"
-#import "KPCTerrestrialCoordinates.h"
-#import "KPCAstronomicalCoordinates.h"
-#import "KPCAstronomicalCoordinates+Labels.h"
-#import "KPCSkyCoordinates.h"
-
 #import "KPCTimes.h"
 #import "KPCSun.h"
 #import "KPCSky.h"
@@ -37,31 +31,7 @@
 
 #import "KPCTwilights.h"
 #import "KPCTwilightConstants.h"
-#import "KPCTwilightSet.h"
 
 #import "NSDate+KPCTimes.h"
 #import "NSNumber+KPCValueStrings.h"
 
-
-#import "KPCAstronomicalInfo.h"
-#import "KPCAstronomicalMass.h"
-#import "KPCAstronomicalRadius.h"
-#import "KPCAstronomicalAge.h"
-#import "KPCAstronomicalEffectiveTemperature.h"
-#import "KPCAstronomicalMetallicity.h"
-#import "KPCAstronomicalDistance.h"
-#import "KPCAstronomicalFlux.h"
-#import "KPCAstronomicalColor.h"
-#import "KPCAstronomicalOrbitalPeriod.h"
-#import "KPCAstronomicalSemiMajorAxis.h"
-#import "KPCAstronomicalEccentricity.h"
-#import "KPCAstronomicalInclination.h"
-#import "KPCAstronomicalAngularDistance.h"
-#import "KPCAstronomicalParallax.h"
-#import "KPCAstronomicalVelocity.h"
-#import "KPCAstronomicalSpectralType.h"
-#import "KPCAstronomicalMorphologicalType.h"
-#import "KPCAstronomicalProperMotion.h"
-
-#import "KPCAstronomicalInfoValueDescription.h"
-#import "KPCSIMBADVOTableValueSetting.h"

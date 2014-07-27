@@ -59,15 +59,6 @@ KPCCoordinatesComponents sunCoordinatesComponentsForJulianDay(double jd)
 	return elements;
 }
 
-KPCAstronomicalCoordinates *sunCoordinatesForJulianDay(double jd)
-{
-    KPCAstronomicalCoordinatesComponents components;
-    components.base = sunCoordinatesComponentsForJulianDay(jd);
-    components.epoch = KPCJulianEpochStandard();
-    components.system = KPCAstronomicalCoordinatesSystemEquatorial;
-    return [KPCAstronomicalCoordinates coordinatesWithComponents:components];
-}
-
 double sunAzimuthForJulianDayLongitudeLatitude(double jd, double longitude, double latitude)
 {
 	KPCCoordinatesComponents elements = sunCoordinatesComponentsForJulianDay(jd);

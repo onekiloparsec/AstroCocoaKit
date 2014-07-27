@@ -6,8 +6,7 @@
 //  Copyright 2010 Soft Tenebras Lux. All rights reserved.
 //
 
-#import "KPCTerrestrialCoordinates.h"
-#import "KPCAstronomicalCoordinates.h"
+#import "KPCCoordinatesComponents.h"
 
 double moonLongitudePeriodicTerms(double D, double M, double Mprime, double Lprime, double F, double julianDay);
 double moonLatitudePeriodicTerms(double D, double M, double Mprime, double Lprime, double F, double julianDay);
@@ -18,21 +17,20 @@ double moonMeanElongation(double julianDay); //
 double moonMeanAnomaly(double julianDay);
 double moonArgumentOfLatitude(double julianDay);
 
-KPCAstronomicalCoordinates *moonCoordinatesForJulianDay(double aJulianDay); // AA
 KPCCoordinatesComponents moonCoordinatesElementsForJulianDay(double julianDay);
 
-double moonAltitudeForJulianDate(double aJulianDate, KPCTerrestrialCoordinates *obsCoords);
-double moonAzimuthForJulianDate(double aJulianDate, KPCTerrestrialCoordinates *obsCoords);
+double moonAltitudeForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords);
+double moonAzimuthForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords);
 
-double julianDateForMoonLunationAndPhase(int aMoonLunation, int aMoonPhase);
+double julianDayForMoonLunationAndPhase(int aMoonLunation, int aMoonPhase);
 
-double moonAgeForJulianDate(double aJulianDate);
+double moonAgeForJulianDay(double julianDay);
 double moonAgeForDate(NSDate *aDate);
 
-NSString *formattedMoonAgeForJulianDate(double aJulianDate);
+NSString *formattedMoonAgeForJulianDay(double julianDay);
 NSString *formattedMoonAgeForDate(NSDate *aDate);
 
 double moonIlluminationFractionForJulianDay(double julianDay); // AA
 
-double moonRiseUTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinates *obsCoords); 
-double moonSetUTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinates *obsCoords);
+double moonRiseUTHourForDateAtObservatory(NSDate *date, KPCCoordinatesComponents obsCoords);
+double moonSetUTHourForDateAtObservatory(NSDate *date, KPCCoordinatesComponents obsCoords);

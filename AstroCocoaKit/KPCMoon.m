@@ -221,30 +221,24 @@ KPCCoordinatesComponents moonCoordinatesElementsForJulianDay(double julianDay)
 	return elements;
 }
 
-KPCAstronomicalCoordinates *moonCoordinatesForJulianDay(double julianDay)
-{	
-	KPCCoordinatesComponents elements = moonCoordinatesElementsForJulianDay(julianDay);
-	return [KPCAstronomicalCoordinates coordinatesWithRightAscension:elements.theta declination:elements.phi];
-}
-
-double moonAltitudeForJulianDate(double aJulianDate, KPCTerrestrialCoordinates *obsCoords)
+double moonAltitudeForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords)
 {
-    KPCCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(aJulianDate);
-	return KPCSkyAltitudeForJulianDayRADecLongitudeLatitude(aJulianDate,
+    KPCCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(julianDay);
+	return KPCSkyAltitudeForJulianDayRADecLongitudeLatitude(julianDay,
 													  moonCoords.theta,
 													  moonCoords.phi,
-													  obsCoords.longitude,
-													  obsCoords.latitude);
+													  obsCoords.theta,
+													  obsCoords.phi);
 }
 
-double moonAzimuthForJulianDate(double aJulianDate, KPCTerrestrialCoordinates *obsCoords)
+double moonAzimuthForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords)
 {
-    KPCCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(aJulianDate);
-	return KPCSkyAzimuthForJulianDayRADecLongitudeLatitude(aJulianDate,
+    KPCCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(julianDay);
+	return KPCSkyAzimuthForJulianDayRADecLongitudeLatitude(julianDay,
 													 moonCoords.theta,
 													 moonCoords.phi,
-													 obsCoords.longitude,
-													 obsCoords.latitude);
+													 obsCoords.theta,
+													 obsCoords.phi);
 }
 
 // INFERRED FROM SKYCALC "flmoon" function.
@@ -334,7 +328,7 @@ double moonAgeForJulianDate(double aJulianDate)
 }
 
 // INFERRED FROM SKYCALC
-NSString *formattedMoonAgeForJulianDate(double aJulianDate)
+NSString *formattedMoonAgeForJulianDay(double julianDay)
 {
 	int nlast;
 	long int noctiles;
@@ -343,13 +337,13 @@ NSString *formattedMoonAgeForJulianDate(double aJulianDate)
 	double x;
 	NSString *age;
 	
-	nlast = (aJulianDate - 2415020.5) / 29.5307 - 1;  /* find current lunation */
+	nlast = (julianDay - 2415020.5) / 29.5307 - 1;  /* find current lunation */
 	
 	lastnewjd = julianDateForMoonLunationAndPhase(nlast, 0);
 	nlast++;
 	newjd     = julianDateForMoonLunationAndPhase(nlast, 0);
 	
-	while((newjd < aJulianDate) && (kount < 40)) {
+	while((newjd < julianDay) && (kount < 40)) {
 		lastnewjd = newjd;
 		nlast++;
 		newjd = julianDateForMoonLunationAndPhase(nlast, 0);
@@ -357,49 +351,49 @@ NSString *formattedMoonAgeForJulianDate(double aJulianDate)
 	if(kount > 35) {  /* oops ... didn't find it ... */
 		NSLog(@"[iObserve: Moon.m - WARNING], Moon.m: Didn't find phase in ageForJulianDate!");
 	} else {
-		x = aJulianDate - lastnewjd;
+		x = julianDay - lastnewjd;
 		nlast--;
 		noctiles = lrintf(x / 3.69134);  /* 3.69134 = 1/8 month; truncate. */
 		if (noctiles == 0) {
 			age = [NSString stringWithFormat:@"%3.1f days since new moon", x];
 		} else if (noctiles <= 2) {  /* nearest first quarter */
 			double firstQuarterJD = julianDateForMoonLunationAndPhase(nlast, 1);
-			x = aJulianDate - firstQuarterJD;
+			x = julianDay - firstQuarterJD;
 			if(x < 0.)
 				age = [NSString stringWithFormat:@"%3.1f days before first quarter", -1*x];
 			else
 				age = [NSString stringWithFormat:@"%3.1f days since first quarter",x];
 		} else if (noctiles <= 4) {  /* nearest full */
 			double fullMoonJD = julianDateForMoonLunationAndPhase(nlast, 2);
-			x = aJulianDate - fullMoonJD;
+			x = julianDay - fullMoonJD;
 			if(x < 0.)
 				age = [NSString stringWithFormat:@"%3.1f days before full moon", -1*x];
 			else
 				age = [NSString stringWithFormat:@"%3.1f days after full moon", x];
 		} else if (noctiles <= 6) {  /* nearest last quarter */
 			double lastQuarterJD = julianDateForMoonLunationAndPhase(nlast, 3);
-			x = aJulianDate - lastQuarterJD;
+			x = julianDay - lastQuarterJD;
 			if(x < 0.)
 				age = [NSString stringWithFormat:@"%3.1f days before last quarter", -1.*x];
 			else
 				age = [NSString stringWithFormat:@"%3.1f days after last quarter", x];
 		} else {
-			age = [NSString stringWithFormat:@"%3.1f days before new moon", newjd - aJulianDate];
+			age = [NSString stringWithFormat:@"%3.1f days before new moon", newjd - julianDay];
 		}
 	}
 	return age;	
 }
 
-double moonAgeForDate(NSDate *aDate)
+double moonAgeForDate(NSDate *date)
 {
-	double jd = julianDayForDate(aDate);
+	double jd = julianDayForDate(date);
 	return moonAgeForJulianDate(jd);
 }
 
-NSString *formattedMoonAgeForDate(NSDate *aDate)
+NSString *formattedMoonAgeForDate(NSDate *date)
 {
-	double jd = julianDayForDate(aDate);
-	return formattedMoonAgeForJulianDate(jd);
+	double jd = julianDayForDate(date);
+	return formattedMoonAgeForJulianDay(jd);
 }
 
 // See AA Equ 48.4 p 346
@@ -425,11 +419,11 @@ double moonIlluminationFractionForJulianDay(double julianDay)
 
 // UT = TD - DeltaT  See p. 78 of AA.
 
-double DeltaUniversalDynamicalTimeForDate(NSDate *aDate)
+double DeltaUniversalDynamicalTimeForDate(NSDate *date)
 {
 	gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [gregorianCalendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-	NSDateComponents *components = [gregorianCalendar components:(NSYearCalendarUnit) fromDate:aDate];
+	NSDateComponents *components = [gregorianCalendar components:(NSYearCalendarUnit) fromDate:date];
 	NSInteger year = [components year];	
 	
 	// See Equ. 10.1 in p.78 of AA.
@@ -440,44 +434,44 @@ double DeltaUniversalDynamicalTimeForDate(NSDate *aDate)
 	return DeltaT / 3600.0; // for UT = 0.
 }
 
-double moonTransitUTHourFractionForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinates *obsCoords)
+double moonTransitUTHourFractionForDateAtObservatory(NSDate *date, KPCCoordinatesComponents obsCoords)
 {
 	// 0h UT = midnight.
-	double DeltaT = DeltaUniversalDynamicalTimeForDate(aDate);
+	double DeltaT = DeltaUniversalDynamicalTimeForDate(date);
     
     // TD = 0 -> UT = -DeltaT
-	CFGregorianDate nullTDGregDate = gregorianUTDateForDateWithHourValue(aDate, -1.*DeltaT);
+	CFGregorianDate nullTDGregDate = gregorianUTDateForDateWithHourValue(date, -1.*DeltaT);
 	double coordsJD = julianDayForGregorianDate(nullTDGregDate);
-	KPCAstronomicalCoordinates *moonCoords = moonCoordinatesForJulianDay(coordsJD);
+	KPCCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(coordsJD);
 	
     // At 0 UT (see AA, p102)
-	CFGregorianDate nullUTGregDate = gregorianUTDateForDateWithHourValue(aDate, 0.0);
+	CFGregorianDate nullUTGregDate = gregorianUTDateForDateWithHourValue(date, 0.0);
 	double Theta0JD = julianDayForGregorianDate(nullUTGregDate);
     
     // LMST at Greenwhich.
 	double Theta0 = localSiderealTimeForJulianDayLongitude(Theta0JD, 0.0)/24.0f*360.0; // Conversion in degrees.
-	double L = -1*[obsCoords longitude]; // in AA, longitude is West Positive.
-	double alpha2 = [moonCoords rightAscension]/24.0f*360.0;
+	double L = -1*obsCoords.theta; // in AA, longitude is West Positive.
+	double alpha2 = moonCoords.theta/24.0f*360.0;
 	
 	double m0 = (alpha2 + L - Theta0) / 360.0;
 	return m0;
 }
 
-double H0UTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinates *obsCoords)
+double H0UTHourForDateAtObservatory(NSDate *date, KPCCoordinatesComponents obsCoords)
 {
 	// 0h UT = midnight.
-	double DeltaT = DeltaUniversalDynamicalTimeForDate(aDate);
+	double DeltaT = DeltaUniversalDynamicalTimeForDate(date);
 
     // TD = 0 -> UT = -DeltaT
-    CFGregorianDate gregDate = gregorianUTDateForDateWithHourValue(aDate, -1.*DeltaT);
+    CFGregorianDate gregDate = gregorianUTDateForDateWithHourValue(date, -1.*DeltaT);
 	double jd = julianDayForGregorianDate(gregDate);
-	KPCAstronomicalCoordinates *moonCoords = moonCoordinatesForJulianDay(jd);
-	       
+	KPCCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(jd);
+
 	double sinh0    = sin(HorizontalParallax_h0*DEG2RAD);
-	double sinphi   = sin([obsCoords latitude]*DEG2RAD);
-	double sindelta = sin([moonCoords declination]*DEG2RAD);
-	double cosphi   = cos([obsCoords latitude]*DEG2RAD);
-	double cosdelta = cos([moonCoords declination]*DEG2RAD);
+	double sinphi   = sin(obsCoords.phi*DEG2RAD);
+	double sindelta = sin(moonCoords.phi*DEG2RAD);
+	double cosphi   = cos(obsCoords.phi*DEG2RAD);
+	double cosdelta = cos(moonCoords.phi*DEG2RAD);
 	
 	// See Equ. 15.1 in p.102 of AA.
 	double cosH0 = (sinh0 - sinphi*sindelta) / (cosphi * cosdelta);
@@ -491,34 +485,34 @@ double H0UTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinates *ob
 	return H0;
 }
 
-double DeltaRiseTransitSetTimeForDate(double n, NSDate *aDate, KPCTerrestrialCoordinates *obsCoords)
+double DeltaRiseTransitSetTimeForDate(double n, NSDate *date, KPCCoordinatesComponents obsCoords)
 {
-	double DeltaT = DeltaUniversalDynamicalTimeForDate(aDate);
-	CFGregorianDate gregDate = gregorianUTDateForDateWithHourValue(aDate, -1.*DeltaT);
+	double DeltaT = DeltaUniversalDynamicalTimeForDate(date);
+	CFGregorianDate gregDate = gregorianUTDateForDateWithHourValue(date, -1.*DeltaT);
 	double jd = julianDayForGregorianDate(gregDate);
 	
-	KPCAstronomicalCoordinates *moonCoords1 = moonCoordinatesForJulianDay(jd-1.0);
-	KPCAstronomicalCoordinates *moonCoords2 = moonCoordinatesForJulianDay(jd);
-	KPCAstronomicalCoordinates *moonCoords3 = moonCoordinatesForJulianDay(jd+1.0);
+	KPCCoordinatesComponents moonCoords1 = moonCoordinatesElementsForJulianDay(jd-1.0);
+	KPCCoordinatesComponents moonCoords2 = moonCoordinatesElementsForJulianDay(jd);
+	KPCCoordinatesComponents moonCoords3 = moonCoordinatesElementsForJulianDay(jd+1.0);
 	
-	double alpha_a = moonCoords2.rightAscension - moonCoords1.rightAscension;
-	double alpha_b = moonCoords3.rightAscension - moonCoords2.rightAscension;
+	double alpha_a = moonCoords2.theta - moonCoords1.theta;
+	double alpha_b = moonCoords3.theta - moonCoords2.theta;
 	double alpha_c = alpha_b - alpha_a;
 	
-	double alpha = moonCoords2.rightAscension + n/2.0 * (alpha_a + alpha_b + n*alpha_c);
+	double alpha = moonCoords2.theta + n/2.0 * (alpha_a + alpha_b + n*alpha_c);
 	
-	double delta_a = moonCoords2.declination - moonCoords1.declination;
-	double delta_b = moonCoords3.declination - moonCoords2.declination;
+	double delta_a = moonCoords2.phi - moonCoords1.phi;
+	double delta_b = moonCoords3.phi - moonCoords2.phi;
 	double delta_c = delta_b - delta_a;
 	
-	double delta = moonCoords2.declination + n/2.0 * (delta_a + delta_b + n*delta_c);
+	double delta = moonCoords2.phi + n/2.0 * (delta_a + delta_b + n*delta_c);
 	
-	double lmst = localSiderealTimeForGregorianDateLongitude(gregDate, [obsCoords longitude]);
+	double lmst = localSiderealTimeForGregorianDateLongitude(gregDate, obsCoords.theta);
 	double H = (lmst - alpha)/24.0*360.0;
-	double h = KPCSkyAltitudeForJulianDayRADecLongitudeLatitude(jd, alpha, delta, obsCoords.longitude, obsCoords.latitude);
+	double h = KPCSkyAltitudeForJulianDayRADecLongitudeLatitude(jd, alpha, delta, obsCoords.theta, obsCoords.phi);
 	
 	double cosdelta = cos(delta*DEG2RAD);
-	double cosphi = cos([obsCoords latitude]*DEG2RAD);
+	double cosphi = cos(obsCoords.phi*DEG2RAD);
 	double sinH = sin(H*DEG2RAD);
 	
 	double Deltam = (h - HorizontalParallax_h0) / (360.0 * cosdelta * cosphi * sinH);
@@ -528,14 +522,14 @@ double DeltaRiseTransitSetTimeForDate(double n, NSDate *aDate, KPCTerrestrialCoo
 // Low-precision formula. Precision about 1% of a day, i.e.
 // See also http://aa.usno.navy.mil/faq/docs/RST_defs.php
 
-double moonRiseUTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinates *obsCoords)
+double moonRiseUTHourForDateAtObservatory(NSDate *date, KPCCoordinatesComponents obsCoords)
 {
-	double m0 = moonTransitUTHourFractionForDateAtObservatory(aDate, obsCoords);
+	double m0 = moonTransitUTHourFractionForDateAtObservatory(date, obsCoords);
 	if (m0 == NOT_A_SCIENTIFIC_NUMBER) {
 		return NOT_A_SCIENTIFIC_NUMBER;
 	}
 	
-	double H0 = H0UTHourForDateAtObservatory(aDate, obsCoords);
+	double H0 = H0UTHourForDateAtObservatory(date, obsCoords);
 	if (H0 == NOT_A_SCIENTIFIC_NUMBER) {
 		return NOT_A_SCIENTIFIC_NUMBER;
 	}
@@ -544,10 +538,10 @@ double moonRiseUTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinat
 	if (m1 < 0) m1+=1;
 	if (m1 > 1) m1-=1;
 	
-	double DeltaT = DeltaUniversalDynamicalTimeForDate(aDate);
+	double DeltaT = DeltaUniversalDynamicalTimeForDate(date);
 	double n = m1 + DeltaT/86400.0;
 	
-	double Deltam = DeltaRiseTransitSetTimeForDate(n, aDate, obsCoords);
+	double Deltam = DeltaRiseTransitSetTimeForDate(n, date, obsCoords);
 	
 	//	NSLog(@"Raw RISE %f -> %f + Delta %f ==>> %f", m1, fmod(m1, 1.0f)*24.0f, Deltam, fmod(m1+Deltam, 1.0f)*24.0f);
 	
@@ -556,14 +550,14 @@ double moonRiseUTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinat
 	return m1*24.0;//fmod(m1, 1.0)*24.0;
 }
 
-double moonSetUTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinates *obsCoords)
+double moonSetUTHourForDateAtObservatory(NSDate *date, KPCCoordinatesComponents obsCoords)
 {
-	double m0 = moonTransitUTHourFractionForDateAtObservatory(aDate, obsCoords);
+	double m0 = moonTransitUTHourFractionForDateAtObservatory(date, obsCoords);
 	if (m0 == NOT_A_SCIENTIFIC_NUMBER) {
 		return NOT_A_SCIENTIFIC_NUMBER;
 	}
 	
-	double H0 = H0UTHourForDateAtObservatory(aDate, obsCoords);
+	double H0 = H0UTHourForDateAtObservatory(date, obsCoords);
 	if (H0 == NOT_A_SCIENTIFIC_NUMBER) {
 		return NOT_A_SCIENTIFIC_NUMBER;
 	}
@@ -572,10 +566,10 @@ double moonSetUTHourForDateAtObservatory(NSDate *aDate, KPCTerrestrialCoordinate
 	if (m2 < 0) m2+=1;
 	if (m2 > 1) m2-=1;
 	
-	double DeltaT = DeltaUniversalDynamicalTimeForDate(aDate);
+	double DeltaT = DeltaUniversalDynamicalTimeForDate(date);
 	double n = m2 + DeltaT/86400.0;
 	
-	double Deltam = DeltaRiseTransitSetTimeForDate(n, aDate, obsCoords);
+	double Deltam = DeltaRiseTransitSetTimeForDate(n, date, obsCoords);
 	
 	//	NSLog(@"Raw SET %f -> %f + Delta %f ==>> %f", fmod(m2, 1.0f)*24.0f m2, fmod(m2, 1.0f)*24.0f, Deltam, fmod(m2+Deltam, 1.0f)*24.0f);
 	
