@@ -228,7 +228,7 @@ KPCAstronomicalCoordinatesComponents moonCoordinatesComponentsForJulianDay(doubl
 
 double moonAltitudeForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords)
 {
-    KPCAstronomicalCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(julianDay);
+    KPCAstronomicalCoordinatesComponents moonCoords = moonCoordinatesComponentsForJulianDay(julianDay);
 	return KPCSkyAltitudeForJulianDayRADecLongitudeLatitude(julianDay,
 													  moonCoords.base.theta,
 													  moonCoords.base.phi,
@@ -238,7 +238,7 @@ double moonAltitudeForJulianDay(double julianDay, KPCCoordinatesComponents obsCo
 
 double moonAzimuthForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords)
 {
-    KPCAstronomicalCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(julianDay);
+    KPCAstronomicalCoordinatesComponents moonCoords = moonCoordinatesComponentsForJulianDay(julianDay);
 	return KPCSkyAzimuthForJulianDayRADecLongitudeLatitude(julianDay,
 													 moonCoords.base.theta,
 													 moonCoords.base.phi,
@@ -447,7 +447,7 @@ double moonTransitUTHourFractionForDateAtObservatory(NSDate *date, KPCCoordinate
     // TD = 0 -> UT = -DeltaT
 	CFGregorianDate nullTDGregDate = gregorianUTDateForDateWithHourValue(date, -1.*DeltaT);
 	double coordsJD = julianDayForGregorianDate(nullTDGregDate);
-	KPCAstronomicalCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(coordsJD);
+	KPCAstronomicalCoordinatesComponents moonCoords = moonCoordinatesComponentsForJulianDay(coordsJD);
 	
     // At 0 UT (see AA, p102)
 	CFGregorianDate nullUTGregDate = gregorianUTDateForDateWithHourValue(date, 0.0);
@@ -470,7 +470,7 @@ double H0UTHourForDateAtObservatory(NSDate *date, KPCCoordinatesComponents obsCo
     // TD = 0 -> UT = -DeltaT
     CFGregorianDate gregDate = gregorianUTDateForDateWithHourValue(date, -1.*DeltaT);
 	double jd = julianDayForGregorianDate(gregDate);
-	KPCAstronomicalCoordinatesComponents moonCoords = moonCoordinatesElementsForJulianDay(jd);
+	KPCAstronomicalCoordinatesComponents moonCoords = moonCoordinatesComponentsForJulianDay(jd);
 
 	double sinh0    = sin(HorizontalParallax_h0*DEG2RAD);
 	double sinphi   = sin(obsCoords.phi*DEG2RAD);
@@ -496,9 +496,9 @@ double DeltaRiseTransitSetTimeForDate(double n, NSDate *date, KPCCoordinatesComp
 	CFGregorianDate gregDate = gregorianUTDateForDateWithHourValue(date, -1.*DeltaT);
 	double jd = julianDayForGregorianDate(gregDate);
 	
-	KPCAstronomicalCoordinatesComponents moonCoords1 = moonCoordinatesElementsForJulianDay(jd-1.0);
-	KPCAstronomicalCoordinatesComponents moonCoords2 = moonCoordinatesElementsForJulianDay(jd);
-	KPCAstronomicalCoordinatesComponents moonCoords3 = moonCoordinatesElementsForJulianDay(jd+1.0);
+	KPCAstronomicalCoordinatesComponents moonCoords1 = moonCoordinatesComponentsForJulianDay(jd-1.0);
+	KPCAstronomicalCoordinatesComponents moonCoords2 = moonCoordinatesComponentsForJulianDay(jd);
+	KPCAstronomicalCoordinatesComponents moonCoords3 = moonCoordinatesComponentsForJulianDay(jd+1.0);
 	
 	double alpha_a = moonCoords2.base.theta - moonCoords1.base.theta;
 	double alpha_b = moonCoords3.base.theta - moonCoords2.base.theta;
