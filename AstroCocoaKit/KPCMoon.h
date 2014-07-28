@@ -18,7 +18,7 @@ double moonMeanElongation(double julianDay); //
 double moonMeanAnomaly(double julianDay);
 double moonArgumentOfLatitude(double julianDay);
 
-KPCAstronomicalCoordinatesComponents moonCoordinatesElementsForJulianDay(double julianDay);
+KPCAstronomicalCoordinatesComponents moonCoordinatesComponentsForJulianDay(double julianDay);
 
 double moonAltitudeForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords);
 double moonAzimuthForJulianDay(double julianDay, KPCCoordinatesComponents obsCoords);

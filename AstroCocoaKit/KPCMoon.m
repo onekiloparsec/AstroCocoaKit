@@ -148,7 +148,7 @@ double moonMeanEclipticOrbitAscendingNodeLongitude(double julianDay)
 }
 
 // See AA. Chapter 47 (pp 337...)
-KPCAstronomicalCoordinatesComponents moonCoordinatesElementsForJulianDay(double julianDay)
+KPCAstronomicalCoordinatesComponents moonCoordinatesComponentsForJulianDay(double julianDay)
 {
 	// All terms below are expressed in degrees.
 	
