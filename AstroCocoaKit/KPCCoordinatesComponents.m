@@ -346,35 +346,49 @@ void KPCTransformCoordinatesComponentsUnits(KPCCoordinatesComponents *inComponen
 // See http://wiki.astrogrid.org/bin/view/Astrogrid/CelestialCoordinates
 double greatCircleAngularDistance(KPCCoordinatesComponents c1, KPCCoordinatesComponents c2)
 {
-	double scale = 1.0;
+	double thetaScale = 1.0;
+	double phiScale = 1.0;
 	switch (c1.units) {
 		case KPCCoordinatesUnitsDegrees:
-			scale = DEG2RAD;
+			thetaScale = DEG2RAD;
+			phiScale = DEG2RAD;
 			break;
 		case KPCCoordinatesUnitsHours:
-			scale = HOUR2RAD;
+			thetaScale = HOUR2RAD;
+			phiScale = HOUR2RAD;
+			break;
+		case KPCCoordinatesUnitsHoursAndDegrees:
+			thetaScale = HOUR2RAD;
+			phiScale = DEG2RAD;
 			break;
 		default:
 			break;
 	}
     
-	double otherScale = 1.0;
+	double otherThetaScale = 1.0;
+	double otherPhiScale = 1.0;
 	switch (c2.units) {
 		case KPCCoordinatesUnitsDegrees:
-			otherScale = DEG2RAD;
+			otherThetaScale = DEG2RAD;
+			otherPhiScale = DEG2RAD;
 			break;
 		case KPCCoordinatesUnitsHours:
-			otherScale = HOUR2RAD;
+			otherThetaScale = HOUR2RAD;
+			otherPhiScale = HOUR2RAD;
+			break;
+		case KPCCoordinatesUnitsHoursAndDegrees:
+			otherThetaScale = HOUR2RAD;
+			otherPhiScale = DEG2RAD;
 			break;
 		default:
 			break;
 	}
     
-	double dec1 = c1.phi * scale;
-	double dec2 = c2.phi * otherScale;
-	double ra1  = c1.theta * scale;
-	double ra2  = c2.theta * otherScale;
-    
+	double ra1  = c1.theta * thetaScale;
+	double ra2  = c2.theta * otherThetaScale;
+	double dec1 = c1.phi * phiScale;
+	double dec2 = c2.phi * otherPhiScale;
+
 	double t1 = hav(dec1-dec2);
 	double t2 = cos(dec1)*cos(dec2)*hav(ra1-ra2);
 	double result = ahav(t1 + t2); // radians
