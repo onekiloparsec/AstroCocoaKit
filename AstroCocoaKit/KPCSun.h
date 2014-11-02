@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KPCCoordinatesComponents.h"
+#import "KPCAstronomicalCoordinatesComponents.h"
 
 double sunMeanAnomalyForJulianDay(double jd);
 double sunMeanLongitudeForJulianDay(double jd);
