@@ -6,6 +6,8 @@
 //  Released under licence GPL v2
 //
 
+#import <Foundation/Foundation.h>
+
 static NSUInteger const KPCTwilightModeEnumBegin = 0;
 
 typedef NS_ENUM(NSUInteger, KPCTwilightMode) {

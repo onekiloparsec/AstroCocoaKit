@@ -6,6 +6,8 @@
 //  Released under licence GPL v2
 //
 
+#import <Foundation/Foundation.h>
+
 extern const double RAD2DEG;
 extern const double RAD2HOUR;
 extern const double DEG2RAD;
